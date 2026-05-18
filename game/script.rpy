@@ -24,8 +24,6 @@ label chapter_1:
     scene bg_desa
     with fade
 
-    play music "audio/lemonade-by-snoozybeats.mp3" fadein 1.0
-
     jump chapter1_full
 
 

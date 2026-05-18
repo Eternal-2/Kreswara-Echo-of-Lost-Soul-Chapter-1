@@ -1,0 +1,5 @@
+# untuk mengunci 1 chapter saja
+persistent.chapter2_unlocked = False
+
+# untuk reset dari awal
+persistent._clear()

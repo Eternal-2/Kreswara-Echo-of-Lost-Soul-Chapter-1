@@ -82,7 +82,7 @@ screen chapter_select():
 
             if not _locked:
                 button:
-                    action Jump(ch["label"])
+                    action Start(ch["label"])
                     xsize   510
                     ysize   240
                     background "#161616ee"

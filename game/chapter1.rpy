@@ -1,6 +1,6 @@
 init python:
     def countdown(st, at, length=50.0):
-        remaining = max(0.0, length - st) # Memastikan angka tidak minus
+        remaining = max(0.0, length - st)
         return Text("%.1f" % remaining, color="#ff4444", size=40, bold=True), 0.1
 
 default quiz_score    = 0
@@ -78,10 +78,8 @@ screen kalah_boss_screen():
                 action Return("menu")
 
 screen soal_panel(nomor="1", tema="", kode="", pertanyaan=""):
-    ## Overlay gelap seluruh layar
     add "#000000aa"
 
-    ## Panel utama — tepat di atas area pilihan menu
     frame:
         xalign 0.5
         yalign 0.3
@@ -94,7 +92,6 @@ screen soal_panel(nomor="1", tema="", kode="", pertanyaan=""):
             spacing 20
             xfill True
 
-            ## ── Header ──────────────────────────────
             vbox:
                 spacing 6
                 xfill True
@@ -118,13 +115,11 @@ screen soal_panel(nomor="1", tema="", kode="", pertanyaan=""):
                     color "#f5ead8"
                     bold True
 
-                ## Garis pemisah
                 frame:
                     background "#c8a96e55"
                     xfill True
                     ysize 1
 
-            ## ── Blok kode (hanya jika ada) ──────────
             if kode != "":
                 frame:
                     background "#0d1117"
@@ -138,7 +133,6 @@ screen soal_panel(nomor="1", tema="", kode="", pertanyaan=""):
                         font "gui/font/SourceCodePro-Regular.ttf"
                         line_spacing 8
 
-            ## ── Pertanyaan ───────────────────────────
             text "[pertanyaan]":
                 size 19
                 color "#e0e0e0"
@@ -153,13 +147,14 @@ screen dialog_choice_hint(mode="cari"):
         add "images/ASSET/DIALOG CHOICE/serap roh.png"      xalign 0.85 yalign 0.85 zoom 0.28
 
 
-define k  = Character("Kreswara", color="#5bc8ff")
-define a  = Character("AS-LEEN", color="#c3b1e1")
-define i  = Character("Ibu Kreswara", color="#f5c8a0")
-define b  = Character("Bapak Kreswara", color="#e07050")
-define d  = Character("Damar", color="#80d4a0")
+define k  = Character("Kreswara",      color="#5bc8ff")
+define a  = Character("AS-LEEN",       color="#c3b1e1")
+define i  = Character("Ibu Kreswara",  color="#f5c8a0")
+define b  = Character("Bapak Kreswara",color="#e07050")
+define d  = Character("Damar",         color="#80d4a0")
 define nr = Character(None, what_style="centered_text")
-define bc = Character("Buta Cakil", color="#ff3333")
+define bc = Character("Buta Cakil",    color="#ff3333")
+
 
 
 image k_normal:
@@ -193,8 +188,8 @@ image bc_talk:
     im.Scale("images/BOSS/Buta cakil/butacakil_talk.png", 750, 1600)
 
 
-image bg_desa       = "images/BG/bg swamp.png"    
-image bg_malam      = "images/BG/bg cave.png"        
+image bg_rumah_siang       = im.Scale("images/BG/rumah kreswara ketika siang hari.png", 1920, 1080)    
+image bg_rumah_malam       = im.Scale("images/BG/rumah kreswara malam.png", 1920, 1080)        
 image bg_starry     = "images/BG/bg starrysky.png"   
 image bg_n2         = "images/BG/bg n2.png"        
 
@@ -211,32 +206,41 @@ image effect_9 = Movie(play="images/EFFECT/9.webm", loop=True, size=(1920, 3413)
 
 label chapter1_full:
 
-    scene bg_desa with dissolve
-    play music "audio/lemonade-by-snoozybeats.mp3" fadein 1.5
+    scene bg_rumah_siang with dissolve
+    play music "audio/backsound/Chapter 1/[Scene Suasana Desa].mp3" fadein 2.0
+    play sound "audio/sfx/chapter 1/1.suara jangkrik.mp3" loop
 
-    nr "Suasana langit jingga menerpa kehangatannya ke sebuah desa kecil yang selalu dialiri tawa semua jiwa di sana, baik tua maupun muda."
-    nr "Tak terkecuali seorang pemuda menawan yang tubuhnya penuh kepuasan batin setelah melepas penat—"
-    nr "saat kakinya sekali lagi mengantarkannya ke rumahnya: sang bunda tercinta."
+    centered "Suasana langit jingga menerpa kehangatannya ke sebuah desa kecil yang selalu dialiri tawa semua jiwa di sana, baik tua maupun muda."
+    centered "Tak terkecuali seorang pemuda menawan yang tubuhnya penuh kepuasan batin setelah melepas penat"
+    centered "saat kakinya sekali lagi mengantarkannya ke rumahnya: sang bunda tercinta."
 
     show ibu_k at Position(xalign=0.5, yalign=0.3) with dissolve
     i "Waraaa. Pulang nak, udah hampir malem."
     hide ibu_k
 
     show k_smile at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "(Tersenyum) Iya bu."
+    k "(Tersenyum)"
     hide k_smile
 
-    scene bg_malam with fade
+    show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
+    k "Iya bu."
+    hide k_talk
+    
+    stop sound
+    scene bg_rumah_malam with fade
+    play music "audio/backsound/Chapter 1/Chapter 1 Scene rumah kreswara saat malam hari.mp3" fadein 1.5
+    play sound "audio/sfx/chapter 1/2.suara ambience rumah malam.mp3" loop
 
     show bpk_k at Position(xalign=0.5, yalign=0.1), napas_berat with dissolve
     b "(Sedikit marah)"
-    b "Kreswara Radyana. Kan sudah bapak bilang beberapa kali—"
+    b "Kreswara Radyana. Kan sudah bapak bilang beberapa kali"
     b "dirimu ini cukup diam di desa, hidup enak di sini,"
     b "dan jangan membujuk bapak dengan idemu itu lagi!"
     hide bpk_k
 
-    show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "(Kecewa) T-tapi pak..."
+    show k_talk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
+    k "(Kecewa)"
+    k "T-tapi pak..."
     k "Di brosur kampus yang Wara pengen ada biaya diskon UKT untuk penerima beasiswa."
     k "Wara akan usahain beasiswa itu kok pak.."
     hide k_talk
@@ -256,8 +260,10 @@ label chapter1_full:
 
 
 label pilihan_pasrah:
+    play music "audio/backsound/Chapter 1/choise_pasrahmarah.mp3" fadein 1.0
     show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "(Kecewa) I-iya pak.... Wara ngerti."
+    k "(Kecewa)"
+    k "I-iya pak.... Wara ngerti."
     hide k_talk
     show bpk_k at Position(xalign=0.5, yalign=0.1) with dissolve
     b "Bagus kalau kau ngerti."
@@ -267,12 +273,12 @@ label pilihan_pasrah:
 
 label pilihan_marah:
     show k_angrytalk at Position(xalign=0.5, yalign=0.3), getar with dissolve
-    k "(Marah) TAPI WARA CAPEK PAK NGIKUTIN EGO BAPAK TERUS!"
+    k "TAPI WARA CAPEK PAK NGIKUTIN EGO BAPAK TERUS!"
     k "WARA PUN PENGEN PUNYA KEINGINAN BUAT HIDUP WARA SENDIRI!!"
     hide k_angrytalk
 
-    play sound "audio/sfx_tamparan.mp3"
     show bpk_k at Position(xalign=0.5, yalign=0.1), getar with dissolve
+    play sound "audio/sfx/chapter 1/3.suara tamparan.mp3"
     b "DASAR ANAK GATAU DIRI."
     b "BAPAK SUDAH CAPEK-CAPEK BEKERJA DAN SEKARANG KAMU DENGAN LANTANGNYA"
     b "MINTA HAL YANG BAPAK GAK SETUJUI."
@@ -281,17 +287,21 @@ label pilihan_marah:
     jump scene_kamar
 
 label scene_kamar:
-    scene bg_desa with fade
+    stop sound
+    scene bg_rumah_malam with fade
+    play music "audio/backsound/Chapter 1/Memperlihatkan_Laptop_Kreswara.mp3" fadein 1.5
+    play sound "audio/sfx/chapter 1/1.suara langkah kaki di tanah.mp3"
     show k_smile at Position(xalign=0.5, yalign=0.3) with dissolve
     k "Gatau aja dia aku sudah ngumpulin uang buat beli laptop."
     hide k_smile
 
-    scene bg_malam with fade
+    scene bg_rumah_siang with fade
+    play sound "audio/sfx/chapter 1/4.suara knalpot nyala.mp3"
+    
     centered "Cahaya matahari yang memancarkan panas kemegahannya hari ini menjadi tumpuan Kreswara untuk membuat pilihan tersembunyinya."
     centered "Suara deru knalpot motor temannya mengantarnya ke rumah kenalan yang bersedia membantu."
 
-    play sound "audio/sfx_knalpot.mp3"
-
+    stop sound
     show damar at Position(xalign=0.5, yalign=0.2) with dissolve
     d "Nih laptop yang lu pengen dari kemarin."
     d "Gila juga nyali lu sampai nabung gini Ra."
@@ -326,6 +336,8 @@ label scene_kamar:
     hide k_talk
 
     scene bg_n2 with fade
+    play music "audio/backsound/Chapter 1/Panggung_dekat_rumah_Kreswara__pertunjukkan.mp3" fadein 1.5
+    play sound "audio/sfx/chapter 1/1.suara orang berbincang.mp3"
     show k_smile at Position(xalign=0.5, yalign=0.3) with dissolve
     k "Mantap banget laptopnya udah aku dapat!"
     k "Ga sabar ingin cepat-cepat mencoba semua hal yang sudah kupelajari."
@@ -355,7 +367,8 @@ label scene_kamar:
     centered "Suasana panggung temaram di bawah lampu redup—menambah kesan kuat akan pementasan yang sebentar lagi akan berjalan."
     centered "Para wayang masih tergeletak rapi, belum ditancapkan ke gedebog pisang."
 
-    play sound "audio/sfx_wayang_tancap.mp3"
+    stop sound
+    play sound "audio/sfx/chapter 1/5.suara gesekan wayang.mp3"
 
     show k_normal at Position(xalign=0.5, yalign=0.3) with dissolve
     k "Oke, mari kita mulai menyimping wayang."
@@ -385,7 +398,8 @@ label scene_kamar:
     k "Sama-sama pak!"
     hide k_talk
 
-    play music "audio/gamelan_wayang.mp3" fadein 1.0
+    play music "audio/backsound/Chapter 1/scene pertunjukan wayang chapter 1.mp3" fadein 1.0
+    play sound "audio/sfx/chapter 1/6.suara tepuk tangan dan suara.mp3"
 
     show k_normal at Position(xalign=0.5, yalign=0.3) with dissolve
     k "Seperti biasa, Bapak sangat jago menjadi Dalang."
@@ -393,6 +407,8 @@ label scene_kamar:
     k "aku sangat mencintai seni yang ada di keluargaku ini—"
     k "tapi aku juga menyukai saat bisa melakukan apapun dengan baris kode yang setiap malam kupelajari."
     hide k_normal
+
+    stop sound
 
     centered "Singkat cerita, pertunjukan wayang sudah selesai digelar."
 
@@ -426,13 +442,13 @@ label scene_kamar:
     k "Akhirnyaa...."
     hide k_talk
 
-    play sound "audio/sfx_resleting.mp3"
+    play sound "audio/sfx/chapter 1/4.suara buka tas.mp3"
 
     centered "Sebuah laptop yang siapapun melihatnya pasti menyadari ia sudah cukup sering berpindah tangan."
     centered "Sebuah jejak teknologi mengukuhkan kehadirannya di antara pemuda dan gerbang tradisional yang melekat dalam dirinya—"
     centered "membuat ledakan emosi kecil tentang bagaimana semua impian Kreswara akhirnya memperlihatkan jalannya."
 
-    play sound "audio/sfx_laptop_on.mp3"
+    play sound "audio/sfx/chapter 1/7.suara laptop menyala.mp3"
 
     show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
     k "Oke... kita lihat isi dalemnya."
@@ -448,13 +464,14 @@ label scene_kamar:
     k "Namanya kayak bukan program biasa."
     hide k_normal
 
-    play sound "audio/sfx_klik.mp3"
+    play sound "audio/sfx/chapter 1/8.suara klik.mp3"
 
     centered "..."
     centered "Tidak terjadi apa-apa."
     centered "Tiba-tiba...."
 
-    play sound "audio/sfx_listrik.mp3"
+    play sound "audio/sfx/chapter 1/8.suara listrik 1.mp3"
+    play music "audio/backsound/Chapter 1/Aktivasi_gagal.mp3" fadein 0.5
 
     centered "Layar tiba-tiba berkedip. Lampu rumah ikut goyang."
 
@@ -466,6 +483,9 @@ label scene_kamar:
 
     stop music
 
+    play sound "audio/sfx/chapter 1/8.suara listrik 1.mp3"
+    play sound "audio/sfx/chapter 1/8.suara static noise.mp3"
+
     centered "Sambaran listrik mengaumkan kehadirannya ke seluruh ruangan—"
     centered "sangat cepat sampai yang bisa dipikirkan Kreswara hanyalah: 'MUNDUR!'"
 
@@ -475,9 +495,12 @@ label scene_kamar:
 
     centered "Putaran energi itu terjadi beriringan dengan tarian menyeramkan yang mengalir ke dinding panggung—"
     centered "melebarkan genggaman volt panasnya, lalu berhenti di satu titik yang tak pernah Kreswara sangka:"
-    centered "Rak wayang."
 
-    play sound "audio/sfx_wayang_move.mp3"
+    stop sound
+    stop sound
+
+    centered "Rak wayang."
+    play sound "audio/sfx/chapter 1/5.suara boneka yang di tancapkan pada pohon pisang.mp3"
 
     centered "Wayang mulai bergerak. Benang tak terlihat penuh aliran listrik mengikat mereka."
     centered "Satu naik, dua ikut, semuanya pelan-pelan terangkat."
@@ -496,7 +519,8 @@ label scene_kamar:
     k "Wayang bapak... ada yang ilang..."
     hide k_think
 
-    play sound "audio/sfx_asleen_boot.mp3"
+    play music "audio/backsound/Chapter 1/asleen berwujud.mp3" fadein 1.0
+    play sound "audio/sfx/chapter 1/8.suara glitch digital.mp3"
 
     a "Pengguna terdeteksi."
 
@@ -604,7 +628,7 @@ label scene_kamar:
     k "Huftt... akhirnya selesai juga..."
     hide k_talk
 
-    play sound "audio/sfx_klik.mp3"
+    play sound "audio/sfx/chapter 1/8.suara klik.mp3"
 
     centered "Tidak ada reaksi."
 
@@ -631,10 +655,10 @@ label scene_kamar:
     hide k_think
 
     scene bg_n2 with fade
-    play music "audio/ambient_perpustakaan.mp3" fadein 1.0
+    play music "audio/backsound/Chapter 1/perpustakaan_desa.mp3" fadein 1.5
 
     centered "Kreswara berjalan mengelilingi desa, lalu sampai di perpustakaan desa."
-    play sound "audio/sfx_pintu_buka.mp3"
+    play sound "audio/sfx/chapter 1/2.suara pintu.mp3"
 
     centered "Komputer yang terlihat usang itu menyala—namun Kreswara tidak bisa langsung mengaksesnya."
     centered "Ia membutuhkan sandi untuk mengakses komputer."
@@ -643,7 +667,7 @@ label scene_kamar:
     k "Hmm... ada password komputer. Tapi aku punya cara untuk masuk."
     hide k_think
 
-    play sound "audio/sfx_kabel_pasang.mp3"
+    play sound "audio/sfx/chapter 1/7.suara ketikan keyboard.mp3"
 
     centered "Kreswara menyambungkan semua kabel untuk memindahkan AS-LEEN."
 
@@ -651,7 +675,7 @@ label scene_kamar:
 
     a "Memulai transfer..."
 
-    play sound "audio/sfx_data_flow.mp3"
+    play sound "audio/sfx/chapter 1/8.suara glitch digital.mp3"
 
     a "Transfer selesai. Saya sekarang berada di PUPILS."
 
@@ -668,13 +692,14 @@ label scene_kamar:
     stop music fadeout 1.0
     play music "audio/ambient_hybrid.mp3" fadein 2.0
 
-    play sound "audio/sfx_energi_aktif.mp3"
+    play sound "audio/sfx/chapter 1/energy charging .mp3"
 
     show effect_7 at truecenter with dissolve
 
     pause 3.0 
 
     scene bg_starry with dissolve
+    play music "audio/backsound/Chapter 1/asleen berwujud.mp3" fadein 1.0
 
     centered "Cahaya yang sangat terang menutupi tubuh Kreswara."
     centered "Ia berpindah ke dunia hybrid. Pandangannya menghilang dalam kegelapan sekejap."
@@ -719,23 +744,28 @@ label scene_kamar:
     hide k_smile
 
 label boss_buta_cakil_start:
+    play music "audio/backsound/Chapter 1/BOSSSSSS.mp3" fadein 1.0
     $ boss_hp       = 3
     $ boss_attempts += 1
     $ fase1_benar   = 0
     $ fase2_benar   = 0
     $ fase3_benar   = 0
 
+    stop music
+
     scene bg_malam with dissolve
-    play music "audio/bgm_boss1.mp3" fadein 0.5
+    play music "audio/backsound/Chapter 1/boss_1-buta_cakil.mp3" fadein 0.5
+    play sound "audio/sfx/chapter 1/8.suara distorsi audio.mp3"
 
     show screen radar_roh_screen(level=1)
+    
     pause 1.0
 
-    play sound "audio/sfx_distorsi.mp3"
-
+    stop sound
     centered "Belum sempat melakukan apa-apa, Kreswara merasakan tanah mulai bergerak,"
     centered "memunculkan keretakan. Tiba-tiba sosok besar muncul di hadapannya."
     centered "Gerakannya kaku seperti wayang yang rusak."
+
 
     show screen state_roh_screen("WASPADA")
     pause 1.0
@@ -747,8 +777,11 @@ label boss_buta_cakil_start:
 
     show effect_3 at truecenter with dissolve
 
+    play sound "audio/sfx/chapter 1/8.suara glitch digital.mp3"
+
     pause 3.0 
 
+    stop sound
     scene bg_malam with dissolve
 
     show bc_talk at Position(xalign=0.5, yalign=0.2) with dissolve
@@ -810,7 +843,7 @@ label soal_1:
             k "FLOAT itu jawabannya!"
             k "Sekarang RASAKAN INI!"
             hide k_angrytalk
-            play sound "audio/sfx_serang.mp3"
+            play sound "audio/sfx/chapter 1/monster.mp3"
             show bc_talk at Position(xalign=0.5, yalign=0.2), getar with dissolve
             bc "GUH!?! Tidak mungkin kau tahu itu...!"
             hide bc_talk
@@ -916,7 +949,7 @@ label soal_2:
             k "Ini untuk wayang bapakku"
             k "SERANG!!"
             hide k_angrytalk
-            play sound "audio/sfx_serang.mp3"
+            play sound "audio/sfx/chapter 1/monster.mp3"
             show bc_talk at Position(xalign=0.5, yalign=0.2), getar with dissolve
             bc "NGHH"
             bc "Kau... kau tahu sejarah?!"
@@ -962,7 +995,7 @@ label soal_3:
             k "10 dibagi 3, sisa 1!"
             k "Aku tidak akan berhenti sampai semua wayang kembali!"
             hide k_angrytalk
-            play sound "audio/sfx_serang.mp3"
+            play sound "audio/sfx/chapter 1/monster.mp3"
             show bc_talk at Position(xalign=0.5, yalign=0.2), getar with dissolve
             bc "GRAAAAHHH Tiga kali?! TIDAK MUNGKIN!"
             hide bc_talk
@@ -1009,6 +1042,7 @@ label soal_3:
 
 
 label boss_buta_cakil_fase2:
+    play music "audio/backsound/Chapter 1/BOSS 2.mp3" fadein 1.0
     hide screen state_roh_screen
 
     show effect_8 at truecenter with dissolve
@@ -1088,7 +1122,7 @@ label soal_4:
             k "kota kita sendiri jadi saksi sejarah dunia!"
             k "Dan kamu, Buta Cakil— ini untuk wayang yang kau curi!"
             hide k_angrytalk
-            play sound "audio/sfx_serang.mp3"
+            play sound "audio/sfx/chapter 1/monster.mp3"
             show bc_talk at Position(xalign=0.5, yalign=0.2), getar with dissolve
             bc "GRAHHHH— Blind spot-ku...!"
             hide bc_talk
@@ -1178,7 +1212,7 @@ label soal_5:
             k "String! input() selalu return teks, apapun yang diketik!"
             k "Sekarang aku tidak akan beri kau waktu bernapas, Buta Cakil!"
             hide k_angrytalk
-            play sound "audio/sfx_serang.mp3"
+            play sound "audio/sfx/chapter 1/monster.mp3"
             show bc_talk at Position(xalign=0.5, yalign=0.2), getar with dissolve
             bc "NGGHH— MUSTAHIL! Kau benar-benar tahu semua ini?!"
             hide bc_talk
@@ -1200,15 +1234,16 @@ label boss_buta_cakil_fase3_retry:
     hide screen timer_screen
     hide screen radar_roh_screen
     hide screen state_roh_screen
+    hide screen soal_panel 
 
     scene bg_malam with dissolve
-    play music "audio/bgm_boss1.mp3" fadein 0.5
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
     a "Kita masih bisa, Wara. Buta Cakil sudah lemah—tinggal fase terakhir!"
     hide a_talk
 
 label boss_buta_cakil_fase3:
+    play music "audio/backsound/Chapter 1/BOSS 3.mp3" fadein 1.0
     hide screen state_roh_screen
     show screen state_roh_screen("marah")
     pause 1.0
@@ -1239,7 +1274,7 @@ label boss_buta_cakil_fase3:
 
 
 label soal_6:
-    show screen timer_screen(length=30.0)
+    show screen timer_screen(length=25.0)
     show screen soal_panel(
         nomor="6",
         tema="Sejarah Politik Konfrontasi",
@@ -1302,7 +1337,7 @@ label soal_6:
             k "MALAYSIA— Soekarno menolak pembentukan Federasi Malaysia!"
             k "Sejarah itu senjataku, dan aku tidak akan berhenti!"
             hide k_angrytalk
-            play sound "audio/sfx_serang.mp3"
+            play sound "audio/sfx/chapter 1/monster.mp3"
             show bc_talk at Position(xalign=0.5, yalign=0.2), getar with dissolve
             bc "GRAAAHHHH— Tidak mungkin... tidak... MUNGKIN!"
             hide bc_talk
@@ -1312,7 +1347,7 @@ label soal_6:
 
 
 label soal_7:
-    show screen timer_screen(length=30.0)
+    show screen timer_screen(length=25.0)
     show screen soal_panel(
         nomor="7 – TERAKHIR",
         tema="Python – Konversi Tipe",
@@ -1347,7 +1382,7 @@ label soal_7:
             k "int dari string '10'— hasilnya 10, bertipe INTEGER!"
             k "INI SERANGANKU YANG TERAKHIR UNTUKMU, BUTA CAKIL!!!"
             hide k_angrytalk
-            play sound "audio/sfx_serang.mp3"
+            play sound "audio/sfx/chapter 1/monster.mp3"
             jump boss_buta_cakil_menang
 
         "10.0 dan <class 'float'>":
@@ -1383,7 +1418,7 @@ label boss_buta_cakil_menang:
     hide screen timer_screen
     stop music fadeout 0.5
 
-    play sound "audio/sfx_boss_ledakan.mp3"
+    play sound "audio/sfx/chapter 1/gelombang energi .mp3"
 
     show k_angrytalk at Position(xalign=0.5, yalign=0.3), getar with dissolve
     k "SELESAIKAN!!"
@@ -1407,7 +1442,7 @@ label boss_buta_cakil_menang:
     centered "Tubuh Buta Cakil mulai pudar dan menjadi cahaya"
     centered "lalu ia perlahan masuk ke sistem."
 
-    play music "audio/ambient_hybrid.mp3" fadein 1.5
+    play music "audio/backsound/Chapter 1/asleen berwujud.mp3" fadein 2.0
 
     centered "Beberapa titik cahaya muncul di sekitar. Wayang yang tadi hilang... mulai kembali satu per satu."
 
@@ -1450,9 +1485,9 @@ label waktu_habis_boss:
     hide screen timer_screen
     hide screen radar_roh_screen
     hide screen state_roh_screen
+    hide screen soal_panel
     $ renpy.block_rollback()
-
-    play sound "audio/sfx_kalah.mp3"
+    
     call screen kalah_boss_screen()
 
     if _return == "restart":

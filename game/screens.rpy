@@ -278,14 +278,14 @@ screen quick_menu():
             yalign 0.95
             spacing 20
 
-            textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+            textbutton _("Back") action Rollback()                                      sensitive True
+            textbutton _("History") action ShowMenu('history')                          sensitive True
+            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)  sensitive True
+            textbutton _("Auto") action Preference("auto-forward", "toggle")            sensitive True
+            textbutton _("Save") action ShowMenu('save')                                sensitive True
+            textbutton _("Q.Save") action QuickSave()                                   sensitive True
+            textbutton _("Q.Load") action QuickLoad()                                   sensitive True
+            textbutton _("Prefs") action ShowMenu('preferences')                        sensitive True
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -327,14 +327,14 @@ screen navigation():
         spacing gui.navigation_spacing
 
         if main_menu:
-            textbutton _("Start") action Start()
+            textbutton _("Return") action Return()
         else:
             textbutton _("Save") action ShowMenu("save")
             textbutton _("Load") action ShowMenu("load")
             textbutton _("Preferences") action ShowMenu("preferences")
             textbutton _("Main Menu") action MainMenu()
-
-        textbutton _("Return") action Return()
+            textbutton _("Return") action Return()
+        
 
 
 style navigation_button is gui_button
@@ -356,6 +356,7 @@ style navigation_button_text:
 
 screen main_menu():
     tag menu
+
 
     if main_menu and not renpy.get_screen("say"):
     # Logo Game kustom (SEBELAH KANAN)
