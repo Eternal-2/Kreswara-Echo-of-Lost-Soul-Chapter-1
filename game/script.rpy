@@ -36,7 +36,7 @@ label chapter_2:
     "Chapter 2 - Bayangan di Hutan"
     "Konten chapter 2 belum ditambahkan."
 
-    return
+    jump chapter2_full
 
 
 ################################################################################
