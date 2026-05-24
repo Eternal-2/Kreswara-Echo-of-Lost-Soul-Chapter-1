@@ -90,7 +90,7 @@ label scene_kamar:
     k "Gatau aja dia aku sudah ngumpulin uang buat beli laptop."
     hide k_smile
 
-    scene bg_rumah_siang with fade
+    scene bg_ruangan_siang with fade
     play sound "audio/sfx/chapter 1/4.suara knalpot nyala.mp3"
     
     nr "Cahaya matahari yang memancarkan panas kemegahannya hari ini menjadi tumpuan Kreswara untuk membuat pilihan tersembunyinya."
