@@ -103,21 +103,62 @@ style frame:
 
 screen say(who, what):
 
-    window:
-        id "window"
+    ## Narasi (nr) — tampilkan di tengah dengan frame khusus
+    if who is None:
 
-        if who is not None:
+        ## Window wajib ada dengan id "what" agar Ren'Py tidak error
+        window:
+            id "window"
+            background None
+            xpos -9999
+            ypos -9999
+            text what id "what":
+                color "#00000000"
+
+        ## Frame narasi hanya muncul jika ada teks
+        if what and what.strip() != "":
+            frame:
+                xalign 0.5
+                yalign 0.5
+                xsize 900
+                xpadding 50
+                ypadding 30
+                background Frame("#0d0d0dcc", 12, 12)
+
+                vbox:
+                    spacing 12
+                    xfill True
+
+                    frame:
+                        background "#c8a96e88"
+                        xfill True
+                        ysize 1
+
+                    text what:
+                        xalign 0.5
+                        text_align 0.5
+                        size 22
+                        color "#f0e6d0"
+                        line_spacing 6
+
+                    frame:
+                        background "#c8a96e88"
+                        xfill True
+                        ysize 1
+
+    ## Dialog biasa — tampilkan di bawah seperti default
+    else:
+
+        window:
+            id "window"
 
             window:
                 id "namebox"
                 style "namebox"
                 text who id "who"
 
-        text what id "what"
+            text what id "what"
 
-
-    ## If there's a side image, display it above the text. Do not display on the
-    ## phone variant - there's no room.
     if not renpy.variant("small"):
         add SideImage() xalign 0.0 yalign 1.0
 

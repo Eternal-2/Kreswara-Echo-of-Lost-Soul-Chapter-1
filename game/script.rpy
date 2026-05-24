@@ -7,11 +7,22 @@
 # The script of the game goes in this file.
 
 # The game starts here.
+label splashscreen:
+
+    scene black
+
+    pause 1.0
+
+    $ renpy.movie_cutscene("video/intro (1).webm")
+
+    scene black with dissolve
+
+    pause 0.5
+
+    return
 
 label start:
-    # PENTING: label start harus langsung return agar Ren'Py
-    # menampilkan main_menu dan Save/Load aktif saat masuk game.
-    # chapter_select dipanggil dari tombol START di main_menu (screens.rpy).
+
     return
 
 

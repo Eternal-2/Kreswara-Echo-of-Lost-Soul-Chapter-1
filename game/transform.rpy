@@ -16,19 +16,32 @@ transform napas_berat:
 transform efek_kedip_radar:
     xalign 0.5 yalign 0.5 zoom 0.5
     alpha 0.0
-    linear 0.2 alpha 1.0
-    linear 0.2 alpha 0.0
-    linear 0.2 alpha 1.0
-    linear 0.2 alpha 0.0
-    linear 0.2 alpha 1.0
+    linear 0.5 alpha 1.0
     linear 0.5 alpha 0.0
+    linear 0.5 alpha 1.0
+    linear 0.5 alpha 0.0
+    linear 0.5 alpha 1.0
+    linear 0.8 alpha 0.0
 
 transform efek_kedip_state:
     xalign 0.5 yalign 0.5 zoom 0.45
     alpha 0.0
-    linear 0.2 alpha 1.0
-    linear 0.2 alpha 0.0
-    linear 0.2 alpha 1.0
-    linear 0.2 alpha 0.0
-    linear 0.2 alpha 1.0
+    linear 0.5 alpha 1.0
     linear 0.5 alpha 0.0
+    linear 0.5 alpha 1.0
+    linear 0.5 alpha 0.0
+    linear 0.5 alpha 1.0
+    linear 0.8 alpha 0.0
+
+transform efek_kedap_kedip:
+    alpha 0.0           # Mulai dari gelap
+    pause 0.1           # Jeda sangat singkat
+    alpha 1.0           # Terang (gambar muncul)
+    pause 0.1
+    alpha 0.0           # Gelap lagi
+    pause 0.1
+    alpha 1.0           # Terang lagi
+    pause 0.2           # Tahan sedikit lebih lama
+    alpha 0.0           # Gelap
+    pause 0.1
+    alpha 1.0           # Terang dan menetap
