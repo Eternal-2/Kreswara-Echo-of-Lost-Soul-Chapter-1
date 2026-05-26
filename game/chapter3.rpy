@@ -1,6 +1,6 @@
 label chapter3_full:
 
-    scene bg_pembuka with dissolve
+    scene bg_black_and_white with dissolve
     play music "audio/backsound/Chapter 3/(1) OPENING_SCENE__RUANGAN_KOSONG__BUNGA_KAMBOJA_BERMEKARAN.mp3" fadein 2.0
     play sound "audio/sfx/chapter 3/1.suara Empty room ambienceEmpty room ambience.mp3" loop
 
@@ -316,10 +316,11 @@ label chapter3_full:
 ## ============================================================
 
 label boss_sengkuni_start:
-    $ boss_attempts_c3 += 1
-    $ fase1_benar_c3   = 0
-    $ fase2_benar_c3   = 0
-    $ fase3_benar_c3   = 0
+    $ boss_hp       = 3
+    $ boss_attempts += 1
+    $ fase1_benar   = 0
+    $ fase2_benar   = 0
+    $ fase3_benar   = 0
 
     ## [BG UMUM] — Tampilkan sprite karakter
     scene bg_black_and_white with fade
@@ -409,8 +410,8 @@ label c3_soal_1:
             jump c3_soal_1_cadangan
 
 label c3_soal_1_cadangan:
-    show screen soal_cadangan_panel(
-        nomor="C1",
+    show screen soal_panel(
+        nomor="CADANGAN 1",
         tema="Python – Kondisional elif",
         kode="nilai = 75\nif nilai >= 85:\n    print('A')\nelif nilai >= 70:\n    print('B')\nelse:\n    print('C')",
         pertanyaan="Apa output dari program tersebut?"
@@ -418,7 +419,7 @@ label c3_soal_1_cadangan:
 
     menu:
         "A":
-            hide screen soal_cadangan_panel
+            hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
@@ -431,7 +432,7 @@ label c3_soal_1_cadangan:
             jump c3_soal_1_cadangan
 
         "B":
-            hide screen soal_cadangan_panel
+            hide screen soal_panel
             $ fase1_benar_c3 += 1
             $ quiz_score_c3  += 1
             show screen feedback_screen("berhasil")
@@ -447,7 +448,7 @@ label c3_soal_1_cadangan:
             jump c3_soal_2
 
         "C":
-            hide screen soal_cadangan_panel
+            hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
@@ -460,7 +461,7 @@ label c3_soal_1_cadangan:
             jump c3_soal_1_cadangan
 
         "AB (dua baris)":
-            hide screen soal_cadangan_panel
+            hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
@@ -542,8 +543,8 @@ label c3_soal_2:
             jump c3_soal_2_cadangan
 
 label c3_soal_2_cadangan:
-    show screen soal_cadangan_panel(
-        nomor="C2",
+    show screen soal_panel(
+        nomor="CADANGAN 2",
         tema="Sejarah – Orde Baru",
         kode="",
         pertanyaan="Program KB (Keluarga Berencana) yang gencar dijalankan\nOrde Baru bertujuan untuk…"
@@ -551,7 +552,7 @@ label c3_soal_2_cadangan:
 
     menu:
         "Meningkatkan jumlah penduduk agar tenaga kerja melimpah":
-            hide screen soal_cadangan_panel
+            hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
@@ -564,7 +565,7 @@ label c3_soal_2_cadangan:
             jump c3_soal_2_cadangan
 
         "Mengendalikan laju pertumbuhan penduduk yang dinilai terlalu cepat":
-            hide screen soal_cadangan_panel
+            hide screen soal_panel
             $ fase1_benar_c3 += 1
             $ quiz_score_c3  += 1
             show screen feedback_screen("berhasil")
@@ -580,7 +581,7 @@ label c3_soal_2_cadangan:
             jump boss_sengkuni_fase2
 
         "Memindahkan penduduk dari Jawa ke luar Jawa":
-            hide screen soal_cadangan_panel
+            hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
@@ -593,7 +594,7 @@ label c3_soal_2_cadangan:
             jump c3_soal_2_cadangan
 
         "Meningkatkan angka kelahiran di daerah terpencil":
-            hide screen soal_cadangan_panel
+            hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
@@ -735,8 +736,8 @@ label c3_soal_3:
             jump c3_soal_3_cadangan
 
 label c3_soal_3_cadangan:
-    show screen soal_cadangan_panel(
-        nomor="C3",
+    show screen soal_panel(
+        nomor="CADANGAN 3",
         tema="Python – Perulangan while",
         kode="n = 1\nwhile n <= 4:\n    print(n, end=' ')\n    n += 1",
         pertanyaan="Apa output dari program tersebut?"
@@ -744,7 +745,7 @@ label c3_soal_3_cadangan:
 
     menu:
         "1 2 3 4 5":
-            hide screen soal_cadangan_panel
+            hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
@@ -757,7 +758,7 @@ label c3_soal_3_cadangan:
             jump c3_soal_3_cadangan
 
         "1 2 3 4":
-            hide screen soal_cadangan_panel
+            hide screen soal_panel
             $ fase2_benar_c3 += 1
             $ quiz_score_c3  += 1
             show screen feedback_screen("berhasil")
@@ -773,7 +774,7 @@ label c3_soal_3_cadangan:
             jump c3_soal_4
 
         "0 1 2 3 4":
-            hide screen soal_cadangan_panel
+            hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
@@ -786,7 +787,7 @@ label c3_soal_3_cadangan:
             jump c3_soal_3_cadangan
 
         "2 3 4 5":
-            hide screen soal_cadangan_panel
+            hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
@@ -868,8 +869,8 @@ label c3_soal_4:
             jump c3_soal_4_cadangan
 
 label c3_soal_4_cadangan:
-    show screen soal_cadangan_panel(
-        nomor="C4",
+    show screen soal_panel(
+        nomor="CADANGAN 4",
         tema="Sejarah – Orde Baru",
         kode="",
         pertanyaan="Program Transmigrasi yang digalakkan Orde Baru\nbertujuan utama untuk…"
@@ -877,7 +878,7 @@ label c3_soal_4_cadangan:
 
     menu:
         "Meratakan persebaran penduduk yang terkonsentrasi di Pulau Jawa":
-            hide screen soal_cadangan_panel
+            hide screen soal_panel
             $ fase2_benar_c3 += 1
             $ quiz_score_c3  += 1
             show screen feedback_screen("berhasil")
@@ -893,7 +894,7 @@ label c3_soal_4_cadangan:
             jump boss_sengkuni_fase3
 
         "Memperluas wilayah Indonesia ke pulau-pulau terpencil":
-            hide screen soal_cadangan_panel
+            hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
@@ -906,7 +907,7 @@ label c3_soal_4_cadangan:
             jump c3_soal_4_cadangan
 
         "Mengembangkan sektor pariwisata di daerah tujuan":
-            hide screen soal_cadangan_panel
+            hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
@@ -919,7 +920,7 @@ label c3_soal_4_cadangan:
             jump c3_soal_4_cadangan
 
         "Menciptakan pusat-pusat industri baru di luar Jawa":
-            hide screen soal_cadangan_panel
+            hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
@@ -939,7 +940,6 @@ label boss_sengkuni_fase3_retry:
     hide screen radar_roh_screen
     hide screen state_roh_screen
     hide screen soal_panel
-    hide screen soal_cadangan_panel
 
     ## [BG KHUSUS] — Tidak tampilkan sprite karakter
     scene bg_c3_bertemu_sengkuni with fade
@@ -990,7 +990,7 @@ label boss_sengkuni_fase3:
     scene bg_black_and_white with fade
 
 label c3_soal_5:
-    show screen timer_screen(length=25.0)
+    show screen timer_screen(length=25.0, on_timeout="waktu_habis_boss_c3")
     show screen soal_panel(
         nomor="5",
         tema="Python – Fungsi & List",
@@ -1065,8 +1065,8 @@ label c3_soal_5:
             jump c3_soal_5_cadangan
 
 label c3_soal_5_cadangan:
-    show screen soal_cadangan_panel(
-        nomor="C5",
+    show screen soal_panel(
+        nomor="CADANGAN 5",
         tema="Python – Kondisional Bersarang",
         kode="x = 10\nif x > 5:\n    if x > 15:\n        print('Besar')\n    else:\n        print('Sedang')\nelse:\n    print('Kecil')",
         pertanyaan="Apa output dari program tersebut?"
@@ -1074,7 +1074,7 @@ label c3_soal_5_cadangan:
 
     menu:
         "Besar":
-            hide screen soal_cadangan_panel
+            hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
@@ -1087,7 +1087,7 @@ label c3_soal_5_cadangan:
             jump c3_soal_5_cadangan
 
         "Sedang":
-            hide screen soal_cadangan_panel
+            hide screen soal_panel
             $ fase3_benar_c3 += 1
             $ quiz_score_c3  += 1
             show screen feedback_screen("berhasil")
@@ -1103,7 +1103,7 @@ label c3_soal_5_cadangan:
             jump c3_soal_6
 
         "Kecil":
-            hide screen soal_cadangan_panel
+            hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
@@ -1116,7 +1116,7 @@ label c3_soal_5_cadangan:
             jump c3_soal_5_cadangan
 
         "Besar Sedang":
-            hide screen soal_cadangan_panel
+            hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
@@ -1129,7 +1129,7 @@ label c3_soal_5_cadangan:
             jump c3_soal_5_cadangan
 
 label c3_soal_6:
-    show screen timer_screen(length=25.0)
+    show screen timer_screen(length=25.0, on_timeout="waktu_habis_boss_c3")
     show screen soal_panel(
         nomor="6 – TERAKHIR",
         tema="Sejarah – Era Reformasi",
@@ -1197,8 +1197,8 @@ label c3_soal_6:
             jump boss_sengkuni_menang
 
 label c3_soal_6_cadangan:
-    show screen soal_cadangan_panel(
-        nomor="C6",
+    show screen soal_panel(
+        nomor="CADANGAN 6",
         tema="Python – range()",
         kode="",
         pertanyaan="Fungsi range(2, 10, 3) menghasilkan urutan angka…"
@@ -1206,7 +1206,7 @@ label c3_soal_6_cadangan:
 
     menu:
         "2, 5, 8, 11":
-            hide screen soal_cadangan_panel
+            hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
@@ -1219,7 +1219,7 @@ label c3_soal_6_cadangan:
             jump c3_soal_6_cadangan
 
         "2, 5, 8":
-            hide screen soal_cadangan_panel
+            hide screen soal_panel
             $ fase3_benar_c3 += 1
             $ quiz_score_c3  += 1
             show screen feedback_screen("berhasil")
@@ -1235,7 +1235,7 @@ label c3_soal_6_cadangan:
             jump boss_sengkuni_menang
 
         "3, 6, 9":
-            hide screen soal_cadangan_panel
+            hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
@@ -1248,7 +1248,7 @@ label c3_soal_6_cadangan:
             jump c3_soal_6_cadangan
 
         "2, 4, 6, 8":
-            hide screen soal_cadangan_panel
+            hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
@@ -1364,7 +1364,6 @@ label waktu_habis_boss_c3:
     hide screen radar_roh_screen
     hide screen state_roh_screen
     hide screen soal_panel
-    hide screen soal_cadangan_panel
     $ renpy.block_rollback()
 
     call screen kalah_boss_screen()
@@ -1372,7 +1371,7 @@ label waktu_habis_boss_c3:
     if _return == "restart":
         jump boss_sengkuni_fase3_retry
     else:
-        jump chapter_select_screen
+        $ renpy.full_restart()
 
 ## ── Chapter 3 Ending ─────────────────────────────────────────
 
@@ -1403,4 +1402,4 @@ label chapter3_ending:
     pause 1.0
 
     $ persistent.chapter4_unlocked = True
-    jump chapter_select_screen
+    $ renpy.full_restart()

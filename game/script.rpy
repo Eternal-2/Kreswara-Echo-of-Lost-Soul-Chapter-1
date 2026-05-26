@@ -59,7 +59,7 @@ label chapter_3:
     "Chapter 3 - Rahasia Kuil"
     "Konten chapter 3 belum ditambahkan."
 
-    return
+    jump chapter3_full
 
 
 ################################################################################

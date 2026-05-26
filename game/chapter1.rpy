@@ -67,6 +67,7 @@ label pilihan_pasrah:
 
 
 label pilihan_marah:
+    play music "audio/backsound/Chapter 1/BAPAK_KWERSA_MARAHH (2).mp3" fadein 1.0
     show k_angrytalk at Position(xalign=0.5, yalign=0.3), getar with dissolve
     k "TAPI WARA CAPEK PAK NGIKUTIN EGO BAPAK TERUS!"
     k "WARA PUN PENGEN PUNYA KEINGINAN BUAT HIDUP WARA SENDIRI!!"
@@ -92,7 +93,7 @@ label scene_kamar:
 
     scene bg_desa_siang with fade
     play music "audio/backsound/chapter 1/[Scene Suasana Desa].mp3"
-    play sound "audio/sfx/chapter 1/4.suara kenalpot nyala.mp3"
+    play sound "audio/sfx/chapter 1/4.suara kenalpot.mp3"
     
     nr "Cahaya matahari yang memancarkan panas kemegahannya hari ini menjadi tumpuan Kreswara untuk membuat pilihan tersembunyinya."
     nr "Suara deru knalpot motor temannya mengantarnya ke rumah kenalan yang bersedia membantu."
@@ -169,15 +170,18 @@ label scene_kamar:
 
     stop sound
     play sound "audio/sfx/chapter 1/5.suara gesekan wayang.mp3"
+    play sound "audio/sfx/chapter 1/5. suara kain.mp3"
 
-    show k_normal at Position(xalign=0.5, yalign=0.3) with dissolve
+    scene bg_nyimping with fade
     k "Oke, mari kita mulai menyimping wayang."
     k "Urutan simping berada di sebelah kanan serta kiri dalang, dari yang terbesar sampai terkecil."
     k "Dimulai dari Tuguwasesa; untuk simping kiri biasanya para raksasa seperti Nirwatakawaca."
     k "Simpingan yang di kanan dalang adalah lambang keutamaan dan kebijakan;"
     k "simpingan yang di kiri adalah angkara murka."
-    hide k_normal
 
+    stop sound
+    stop sound
+    scene bg_panggung with fade
     show k_smile at Position(xalign=0.5, yalign=0.3) with dissolve
     k "Sip, selesai deh!"
     hide k_smile
@@ -201,11 +205,12 @@ label scene_kamar:
     scene bg_panggung_khusus with fade
 
     play music "audio/backsound/Chapter 1/scene pertunjukan wayang chapter 1.mp3" fadein 1.0
-    play sound "audio/sfx/chapter 1/6.suara tepuk tangan dan suara.mp3"
 
     k "Seperti biasa, Bapak sangat jago menjadi Dalang."
     k "Melihat hal ini membuatku menyadari suatu hal:"
     k "aku sangat mencintai seni yang ada di keluargaku ini—"
+
+    play sound "audio/sfx/chapter 1/6.suara tepuk tangan dan suara.mp3"
     k "tapi aku juga menyukai saat bisa melakukan apapun dengan baris kode yang setiap malam kupelajari."
 
     stop sound
@@ -223,7 +228,7 @@ label scene_kamar:
     hide bpk_k
 
     show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "Oh iya pak gapapa. Kreswara akan jaga rumah kok pak!"
+    k "Oh iya pak gapapa, Kreswara akan jaga rumah kok pak!"
     hide k_talk
 
     show bpk_k at Position(xalign=0.5, yalign=0.1) with dissolve
@@ -253,7 +258,7 @@ label scene_kamar:
 
     nr "Sebuah laptop yang siapapun melihatnya pasti menyadari ia sudah cukup sering berpindah tangan."
     nr "Sebuah jejak teknologi mengukuhkan kehadirannya di antara pemuda dan gerbang tradisional yang melekat dalam dirinya—"
-    nr "membuat ledakan emosi kecil tentang bagaimana semua impian Kreswara akhirnya memperlihatkan jalannya."
+    nr "Membuat ledakan emosi kecil tentang bagaimana semua impian Kreswara akhirnya memperlihatkan jalannya."
 
     play sound "audio/sfx/chapter 1/7.suara laptop menyala.mp3"
 
@@ -286,7 +291,7 @@ label scene_kamar:
     play sound "audio/sfx/chapter 1/8.suara listrik 1.mp3"
     play music "audio/backsound/Chapter 1/Aktivasi_gagal.mp3" fadein 0.5
 
-    nr "Layar tiba-tiba berkedip. Lampu rumah ikut goyang."
+    nr "Layar tiba-tiba berkedip, Lampu rumah ikut goyang."
 
     show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
     k "Hah? Kenapaa iniii???!!"
@@ -302,14 +307,14 @@ label scene_kamar:
     play sound "audio/sfx/chapter 1/8.suara static noise.mp3"
 
     nr "Sambaran listrik mengaumkan kehadirannya ke seluruh ruangan—"
-    nr "sangat cepat sampai yang bisa dipikirkan Kreswara hanyalah: 'MUNDUR!'"
+    nr "Sangat cepat sampai yang bisa dipikirkan Kreswara hanyalah: 'MUNDUR!'"
 
     show k_angrytalk at Position(xalign=0.5, yalign=0.3), getar with dissolve
     k "WOI WOI WOI!!"
     hide k_angrytalk
 
     nr "Putaran energi itu terjadi beriringan dengan tarian menyeramkan yang mengalir ke dinding panggung—"
-    nr "melebarkan genggaman volt panasnya, lalu berhenti di satu titik yang tak pernah Kreswara sangka"
+    nr "Melebarkan genggaman volt panasnya, lalu berhenti di satu titik yang tak pernah Kreswara sangka"
 
     nr "Rak wayang."
     play sound "audio/sfx/chapter 1/5.suara boneka yang di tancapkan pada pohon pisang.mp3"
@@ -398,16 +403,16 @@ label scene_kamar:
     hide a_siluet
 
     show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "o-oke... Caranya?"
+    k "O-oke... Caranya?"
     hide k_talk
 
     show a_siluet at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "Dengan masuk ke sana. Tentu saja."
+    a "Tentu saja , dengan masuk kesana"
     hide a_siluet
 
     show k_smile at Position(xalign=0.5, yalign=0.3) with dissolve
     k "(Senyum kecil, setengah nekat setengah kesal)"
-    k "Yaudah... masukin aja langsung."
+    k "Yaudah.. bawa aku kesana sekarang"
     hide k_smile
 
     show a_siluet at Position(xalign=0.5, yalign=0.3) with dissolve
@@ -415,7 +420,7 @@ label scene_kamar:
     hide a_siluet
 
     show k_angrytalk at Position(xalign=0.5, yalign=0.3), getar with dissolve
-    k "Terus harus gimana sih?! Serba salah!"
+    k "Terus harus gimana sih?!"
     hide k_angrytalk
 
     show a_siluet at Position(xalign=0.5, yalign=0.3) with dissolve
@@ -423,7 +428,7 @@ label scene_kamar:
     hide a_siluet
 
     show k_think at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "PUPILS...? Sejenis bagian yang ada di mata?"
+    k "PUPILS...? Yang ada di mata?"
     k "...Seriusan harus bikin sendiri?"
     hide k_think
 
@@ -1274,10 +1279,10 @@ label boss_buta_cakil_menang:
     nr "Tubuh Buta Cakil mulai pudar dan menjadi cahaya"
     nr "lalu ia perlahan masuk ke sistem."
 
-    play music "audio/backsound/Chapter 1/asleen berwujud.mp3" fadein 2.0
-
     nr "Beberapa titik cahaya muncul di sekitar. Wayang yang tadi hilang... mulai kembali satu per satu."
 
+    play music "audio/backsound/Chapter 1/asleen berwujud.mp3" fadein 2.0
+    play sound "audio/backsound/Chapter 1/akhir chapter1.mp3" fadein 2.0 loop
     show k_smile at Position(xalign=0.5, yalign=0.3) with dissolve
     k "(Senyum lega)"
     hide k_smile
@@ -1309,7 +1314,7 @@ label boss_buta_cakil_menang:
     nr "── DATA ROH BUTA CAKIL TERSIMPAN ──"
     nr "Radar Roh meningkat. Satu entitas berhasil dijinakkan."
 
-
+    stop sound
     jump chapter1_ending
 
 

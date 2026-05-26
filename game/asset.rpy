@@ -58,7 +58,8 @@ image bg_desa_siang       = im.Scale("images/BG/BG chapter 1/rumah kreswara keti
 image bg_desa_malam       = im.Scale("images/BG/BG chapter 1/rumah kreswara malam.png", 1920, 1080)        
 image bg_ruangan_siang    = im.Scale("images/BG/BG chapter 1/DALAM RUMAH KRESWARA  (SIANG).png", 1920, 1080) 
 image bg_ruangan_malam    = im.Scale("images/BG/BG chapter 1/DALAM RUMAH KRESWARA (MALAM).png", 1920, 1080)
-image bg_cod              = im.Scale("images/BG/BG chapter 1/Kreswara menuju pulang ke rumah .png", 1920, 1080)     
+image bg_cod              = im.Scale("images/BG/BG chapter 1/Kreswara menuju pulang ke rumah .png", 1920, 1080)
+image bg_nyimping         = im.Scale("images/BG/BG chapter 1/Kreswara Nyimping Wayang.png", 1920, 1080)     
 image bg_panggung         = im.Scale("images/BG/BG chapter 1/panggung wayang .png", 1920, 1080) 
 image bg_panggung_khusus  = im.Scale("images/BG/BG chapter 1/Wara melihat Bapaknya Jadi dalang.png", 1920, 1080)
 image bg_rakit_pupils     = im.Scale("images/BG/BG chapter 1/Kreswara Rakit Pupils.png", 1920, 1080)
@@ -70,10 +71,9 @@ image bg_menang           = im.Scale("images/BG/BG chapter 1/KRESWARA MENGALAHKA
 
 
 # Background Chapter 3
-image bg_pembuka           = im.Scale("images/BG/bakcground utama _pembuka .png", 1920, 1080)
-image bg_desa_retak        = im.Scale("images/BG/desa digital + anomaly dengan retakan nuansa biru di langit .png", 1920, 1080)
-image bg_dimensi_lain      = im.Scale("images/BG/panggung wayang + dimensi lain .png", 1920, 1080)
-image bg_black_and_white   = im.Scale("images/BG/black and white version .png", 1920, 1080)
+image bg_desa_retak        = im.Scale("images/BG/BG Chapter 3/desa digital + anomaly dengan retakan nuansa biru di langit .png", 1920, 1080)
+image bg_dimensi_lain      = im.Scale("images/BG/BG Chapter 3/panggung wayang + dimensi lain .png", 1920, 1080)
+image bg_black_and_white   = im.Scale("images/BG/BG Chapter 3/bakcground utama _pembuka.png", 1920, 1080)
 image bg_c3_roh_kamboja    = im.Scale("images/BG/BG Chapter 3/kreswara berada di ruangan buntu dan melihat beberapa roh data kecil dengan lantai bunga kamboja .png", 1920, 1080)
 image bg_c3_lorong_pintu   = im.Scale("images/BG/BG Chapter 3/kreswara dan as-leen berjalan menyusuri lorong hingga diujung bertemu pintu besar yang sudah terbuka lebar.png", 1920, 1080)
 image bg_c3_jarum_retak    = im.Scale("images/BG/BG Chapter 3/setelah masuk dinding ruangan tibatiba retak ribuan jarum melesat seperti hujan pecahan kaca.png", 1920, 1080)

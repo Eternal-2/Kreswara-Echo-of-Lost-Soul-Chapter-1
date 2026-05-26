@@ -24,7 +24,7 @@ init python:
                 "title"   : "...",
                 "subtitle": "...",
                 "label"   : "chapter_3",
-                "locked"  : not persistent.chapter3_unlocked,
+                "locked"  : persistent.chapter3_unlocked,
             },
             {
                 "number"  : 4,

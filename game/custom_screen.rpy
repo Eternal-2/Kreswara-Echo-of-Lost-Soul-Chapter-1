@@ -39,14 +39,12 @@ init python:
                     outlines=[(3, "#000000aa", 0, 0)]), 0.05
 
 
-screen timer_screen(length=50.0):
+screen timer_screen(length=50.0, on_timeout="waktu_habis_boss"):
     zorder 200
     modal False
 
-    # Jalankan jump waktu habis
-    timer length action Jump("waktu_habis_boss")
+    timer length action Jump(on_timeout)
 
-    # Container tengah atas
     frame:
         xalign 0.5
         yalign 0.0
@@ -63,12 +61,10 @@ screen timer_screen(length=50.0):
             xfill True
             spacing 6
 
-            # Baris atas: label + angka
             hbox:
                 xfill True
                 yalign 0.5
 
-                # Label TIMER
                 hbox:
                     spacing 8
                     yalign 0.5
@@ -81,12 +77,10 @@ screen timer_screen(length=50.0):
                         kerning 2.0
                         yalign 0.5
 
-                # Angka countdown (kanan)
                 add DynamicDisplayable(countdown_text_color, length=length):
                     xalign 1.0
                     yalign 0.5
 
-            # Bar countdown
             frame:
                 xfill True
                 ysize 18
@@ -163,68 +157,78 @@ screen kalah_boss_screen():
                 action Return("menu")
 
 screen soal_panel(nomor="1", tema="", kode="", pertanyaan=""):
-    add "#000000aa"
+    add "#000000bb"
 
     frame:
         xalign 0.5
-        yalign 0.3
-        xsize 820
-        xpadding 36
-        ypadding 30
-        background Frame("#111318ee", 12, 12)
+        yalign 0.0
+        yoffset 190
+        xsize 900
+        
+        xpadding 40
+        ypadding 28
+        background Frame("#0e1016f0", 14, 14)
 
         vbox:
-            spacing 20
+            spacing 14
             xfill True
 
-            vbox:
-                spacing 6
+            hbox:
                 xfill True
-
+                yalign 0.5
                 hbox:
                     spacing 10
-                    xfill True
-                    text "⚔ SERANGAN DATA":
+                    yalign 0.5
+                    text "⚔":
+                        size 14
+                        color "#c8a96e"
+                        yalign 0.5
+                    text "SERANGAN DATA":
                         size 12
                         color "#c8a96e"
                         kerning 3.0
                         yalign 0.5
-                    text "#[nomor]":
-                        size 12
-                        color "#c8a96e"
-                        bold True
-                        yalign 0.5
-
-                text "[tema]":
-                    size 22
-                    color "#f5ead8"
+                text "#[nomor]":
+                    xalign 1.0
+                    size 13
+                    color "#c8a96e88"
                     bold True
 
-                frame:
-                    background "#c8a96e55"
-                    xfill True
-                    ysize 1
+            text "[tema]":
+                size 24
+                color "#f5ead8"
+                bold True
+
+            frame:
+                background "#c8a96e66"
+                xfill True
+                ysize 1
 
             if kode != "":
                 frame:
-                    background "#0d1117"
+                    background "#0a0d12"
                     xfill True
-                    xpadding 18
-                    ypadding 14
-                    left_margin 0
-                    text "[kode]":
-                        size 18
-                        color "#79c0ff"
-                        font "gui/font/SourceCodePro-Regular.ttf"
-                        line_spacing 8
+                    left_padding  20
+                    right_padding 20
+                    top_padding   14
+                    bottom_padding 14
+
+                    frame:
+                        background Transform(Solid("#2d6a9f"), xsize=3)
+                        left_padding 15
+                        
+                        text "[kode]":
+                            size 17
+                            color "#79c0ff"
+                            font "gui/font/SourceCodePro-Regular.ttf"
+                            line_spacing 10
 
             text "[pertanyaan]":
-                size 19
-                color "#e0e0e0"
+                size 18
+                color "#ddd8cc"
                 xalign 0.5
                 text_align 0.5
-                line_spacing 4
-
+                line_spacing 6
 
 screen dialog_choice_hint(mode="cari"):
     if mode == "cari":
