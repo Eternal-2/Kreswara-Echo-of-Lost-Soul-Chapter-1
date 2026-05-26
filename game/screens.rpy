@@ -397,24 +397,13 @@ style navigation_button_text:
 
 screen main_menu():
     tag menu
+    add "gui/main_menu.png" xalign 0.5 yalign 0.5 fit "cover"
 
-
-    if main_menu and not renpy.get_screen("say"):
-    # Logo Game kustom (SEBELAH KANAN)
-        add "images/menu/TEXT DIGITAL WAYANG.png":
-            xalign 1.3
-            yalign 0.5
-            at transform:
-                alpha 0.0
-                linear 1.5 alpha 1.0
-
-        vbox:
-            xalign 0.1
+    vbox:
+            xalign 0.2
             yalign 0.5
             spacing 15
 
-# Tombol START — pakai StartReplay dummy bukan ShowMenu
-# agar chapter_select terbuka sebagai overlay, bukan menu context
             imagebutton:
                 idle "images/menu/button start.png"
                 action ShowMenu("chapter_select")

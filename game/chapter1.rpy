@@ -90,8 +90,9 @@ label scene_kamar:
     k "Gatau aja dia aku sudah ngumpulin uang buat beli laptop."
     hide k_smile
 
-    scene bg_ruangan_siang with fade
-    play sound "audio/sfx/chapter 1/4.suara knalpot nyala.mp3"
+    scene bg_desa_siang with fade
+    play music "audio/backsound/chapter 1/[Scene Suasana Desa].mp3"
+    play sound "audio/sfx/chapter 1/4.suara kenalpot nyala.mp3"
     
     nr "Cahaya matahari yang memancarkan panas kemegahannya hari ini menjadi tumpuan Kreswara untuk membuat pilihan tersembunyinya."
     nr "Suara deru knalpot motor temannya mengantarnya ke rumah kenalan yang bersedia membantu."
@@ -122,20 +123,25 @@ label scene_kamar:
     hide k_talk
 
     scene bg_cod with fade
+    play sound "audio/sfx/chapter 1/4.suara motor nyala.mp3"
 
     d "Halah ada-ada aja lu hahaha."
     d "Yaudeh, hati-hati ya baliknya."
     
     k "Iya, makasih ya sekali lagi."
 
+    stop sound
+
     scene bg_ruangan_siang with fade
     play music "audio/backsound/Chapter 1/Panggung_dekat_rumah_Kreswara__pertunjukkan.mp3" fadein 1.5
     play sound "audio/sfx/chapter 1/1.suara orang berbincang.mp3"
+    play sound "audio/sfx/chapter 1/1.suara langkah kaki di tanah.mp3"
     show k_smile at Position(xalign=0.5, yalign=0.3) with dissolve
     k "Mantap banget laptopnya udah aku dapat!"
     k "Ga sabar ingin cepat-cepat mencoba semua hal yang sudah kupelajari."
     hide k_smile
 
+    stop sound
     show bpk_k at Position(xalign=0.5, yalign=0.1) with dissolve
     b "Waraaa... Kamu sudah menyiapkan buat pertunjukan nanti malam belum nak?"
     hide bpk_k
@@ -209,6 +215,8 @@ label scene_kamar:
     stop music fadeout 1.0
 
     scene bg_ruangan_malam with fade
+    play music "audio/backsound/Chapter 1/Panggung_dekat_rumah_Kreswara__pertunjukkan.mp3"
+    play sound "audio/sfx/chapter 1/2.suara ambience rumah malam.mp3"
     show bpk_k at Position(xalign=0.5, yalign=0.1) with dissolve
     b "Nak, nanti tolong jaga rumah ya."
     b "Bapak dan ibu akan pergi keluar kota karena ada urusan dengan teman bapak."
@@ -223,9 +231,13 @@ label scene_kamar:
     b "Bapak berangkat sekarang ya, jangan lupa bereskan wayang lalu kunci pintunya."
     hide bpk_k
 
+    play sound "audio/sfx/chapter 1/4.suara motor nyala.mp3"
+
     show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
     k "Iya pak, hati-hati di jalan."
     hide k_talk
+
+    stop sound
 
     show k_smile at Position(xalign=0.5, yalign=0.3) with dissolve
     k "Gatau aja aku bakal main laptop semalaman ini hehe."
@@ -284,6 +296,8 @@ label scene_kamar:
 
     stop music
 
+    play music "audio/backsound/Chapter 1/WAYANG_BERGERAK__BENANG_LISTRIK__WAYANG_HILANG.mp3" fadein 0.5 
+
     play sound "audio/sfx/chapter 1/8.suara listrik 1.mp3"
     play sound "audio/sfx/chapter 1/8.suara static noise.mp3"
 
@@ -295,16 +309,14 @@ label scene_kamar:
     hide k_angrytalk
 
     nr "Putaran energi itu terjadi beriringan dengan tarian menyeramkan yang mengalir ke dinding panggung—"
-    nr "melebarkan genggaman volt panasnya, lalu berhenti di satu titik yang tak pernah Kreswara sangka:"
-
-    stop sound
-    stop sound
+    nr "melebarkan genggaman volt panasnya, lalu berhenti di satu titik yang tak pernah Kreswara sangka"
 
     nr "Rak wayang."
     play sound "audio/sfx/chapter 1/5.suara boneka yang di tancapkan pada pohon pisang.mp3"
 
     nr "Wayang mulai bergerak. Benang tak terlihat penuh aliran listrik mengikat mereka."
     nr "Satu naik, dua ikut, semuanya pelan-pelan terangkat."
+    stop sound
 
     show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
     k "(Panik)"
@@ -314,6 +326,9 @@ label scene_kamar:
     nr "Wayang Hilang."
     nr "Rak terakhir yang kebetulan Kreswara sentuh sekarang terasa kosong."
 
+    stop sound
+    stop sound
+
     scene bg_ruangan_malam with fade
     show k_think at Position(xalign=0.5, yalign=0.3) with dissolve
     k "(Bingung)"
@@ -321,10 +336,14 @@ label scene_kamar:
     k "Wayang bapak... ada yang ilang..."
     hide k_think
 
+    stop music
+
     play music "audio/backsound/Chapter 1/asleen berwujud.mp3" fadein 1.0
     play sound "audio/sfx/chapter 1/8.suara glitch digital.mp3"
 
+    show a_siluet at Position(xalign=0.5, yalign=0.3) with dissolve
     a "Pengguna terdeteksi."
+    hide a_siluet
 
     show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
     k "(Shock)"
@@ -339,7 +358,9 @@ label scene_kamar:
     k "Jam segini warga desa pasti sudah tidur lelap semua..."
     hide k_talk
 
+    show a_siluet at Position(xalign=0.5, yalign=0.3) with dissolve
     a "Tenang. Saya tidak berbahaya."
+    hide a_siluet
 
     show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
     k "...."
@@ -350,8 +371,10 @@ label scene_kamar:
     k "Coba muncul dulu atuh!"
     hide k_think
 
+    show a_siluet at Position(xalign=0.5, yalign=0.3) with dissolve
     a "Saya aktif setelah lonjakan energi tadi."
     a "Tepatnya 7 menit 56 detik yang lalu."
+    hide a_siluet
 
     nr "Kreswara langsung diam. Matanya ke laptop, lalu ke seluruh pojok ruangan, tidak menemukan sumber suara."
 
@@ -360,47 +383,61 @@ label scene_kamar:
     k "Wayang itu... ke mana?"
     hide k_think
 
+    show a_siluet at Position(xalign=0.5, yalign=0.3) with dissolve
     a "Ada. Tidak hilang."
     a "Mereka hanya berpindah ke dunia hybrid-virtual."
     a "Hal yang tentunya tidak bisa kau lihat. Untuk saat ini."
+    hide a_siluet
 
     show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
     k "...dan sekarang aku harus ngapain?"
     hide k_talk
 
+    show a_siluet at Position(xalign=0.5, yalign=0.3) with dissolve
     a "Mengambilnya kembali."
+    hide a_siluet
 
     show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
     k "o-oke... Caranya?"
     hide k_talk
 
+    show a_siluet at Position(xalign=0.5, yalign=0.3) with dissolve
     a "Dengan masuk ke sana. Tentu saja."
+    hide a_siluet
 
     show k_smile at Position(xalign=0.5, yalign=0.3) with dissolve
     k "(Senyum kecil, setengah nekat setengah kesal)"
     k "Yaudah... masukin aja langsung."
     hide k_smile
 
+    show a_siluet at Position(xalign=0.5, yalign=0.3) with dissolve
     a "Tidak bisa."
+    hide a_siluet
 
     show k_angrytalk at Position(xalign=0.5, yalign=0.3), getar with dissolve
     k "Terus harus gimana sih?! Serba salah!"
     hide k_angrytalk
 
+    show a_siluet at Position(xalign=0.5, yalign=0.3) with dissolve
     a "Kamu harus membuat perangkat bernama PUPILS."
+    hide a_siluet
 
     show k_think at Position(xalign=0.5, yalign=0.3) with dissolve
     k "PUPILS...? Sejenis bagian yang ada di mata?"
     k "...Seriusan harus bikin sendiri?"
     hide k_think
 
+    show a_siluet at Position(xalign=0.5, yalign=0.3) with dissolve
     a "Ya. Gunakan yang ada di sekitarmu. Penglihatan kamu masih bekerja kan?"
+    hide a_siluet
 
     show k_angry at Position(xalign=0.5, yalign=0.3) with dissolve
     k "Nyebelin..."
     hide k_angry
 
+    show a_siluet at Position(xalign=0.5, yalign=0.3) with dissolve
     nr "Kreswara memeriksa sekitar rumah dan panggung."
+    hide a_siluet
 
     scene bg_rakit_pupils with dissolve
 
@@ -443,15 +480,19 @@ label scene_kamar:
     k "Loh? Kok ga nyala?"
     hide k_talk
 
+    show a_siluet at Position(xalign=0.5, yalign=0.3) with dissolve
     a "Karena saya masih di dalam sistem lama."
     a "Saya harus dipindahkan ke PUPILS."
+    hide a_siluet
 
     show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
     k "Jadi aku harus mindahin kamu ke helm?"
     hide k_talk
 
+    show a_siluet at Position(xalign=0.5, yalign=0.3) with dissolve
     a "Benar! Agar saya bisa menjadi inti sistem dan membimbingmu langsung di dunia hybrid."
     a "Gunakan komputer dengan koneksi lebih stabil."
+    hide a_siluet
 
     show k_think at Position(xalign=0.5, yalign=0.3) with dissolve
     k "(Berpikir) Di mana tempat aku untuk melakukan itu?... Aku tau!"
@@ -493,7 +534,7 @@ label scene_kamar:
 
     play sound "audio/sfx/chapter 1/energy charging .mp3"
 
-    show effect_7 at truecenter with dissolve
+    show effect_10 at truecenter with dissolve
 
     pause 3.0 
 
@@ -676,6 +717,7 @@ label soal_1:
             a "Bool itu True atau False. 7.5 jelas bukan itu!"
             hide a_talk
             jump cadangan_1
+
 
 label soal_2:
     show screen soal_panel(
@@ -1283,11 +1325,12 @@ label waktu_habis_boss:
     if _return == "restart":
         jump boss_buta_cakil_fase3_retry
     else:
-        jump chapter_select_screen
+        $ renpy.full_restart()
 
 
 label chapter1_ending:
     stop music fadeout 1.5
+    stop sound fadeout 1.0
     scene bg_dunia_lain with dissolve
 
     nr "── CHAPTER 1 SELESAI ──"
@@ -1297,16 +1340,14 @@ label chapter1_ending:
     nr "Boss berikutnya: Dursasana — Tema Pemburuan & Hukuman."
     nr "Sampai jumpa di Chapter 2: Perburuan Fajar."
 
-    pause 1.5                       
-    scene black with Dissolve(2.0)   
-    pause 1.0                        
+    pause 1.5
+    scene black with Dissolve(2.0)
+    pause 1.0
 
     $ persistent.chapter2_unlocked = True
-    jump chapter_select_screen
 
-label chapter_select_screen:
-    call screen chapter_select()
-    return
+    $ renpy.full_restart()
+
 
 label cadangan_1:
     show screen soal_panel(
@@ -1371,6 +1412,7 @@ label cadangan_1:
             hide a_talk
             jump cadangan_1
 
+
 label cadangan_2:
     show screen soal_panel(
         nomor="2C",
@@ -1433,6 +1475,7 @@ label cadangan_2:
             a "G30S → Supersemar. Itu urutan yang benar!"
             hide a_talk
             jump cadangan_2
+
 
 label cadangan_3:
     show screen soal_panel(
@@ -1561,6 +1604,7 @@ label cadangan_4:
             hide a_talk
             jump cadangan_4
 
+
 label cadangan_5:
     show screen soal_panel(
         nomor="5C",
@@ -1624,6 +1668,7 @@ label cadangan_5:
             hide a_talk
             jump cadangan_5
 
+
 label cadangan_6:
     show screen timer_screen(length=25.0)
     show screen soal_panel(
@@ -1644,9 +1689,9 @@ label cadangan_6:
             k "Liberal?! Di era Soekarno?! Salah besar!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "Demokrasi Terpimpin justru anti-liberal!"
+            a "Demokrasi Terpimpin justru anti-liberal! Coba soal serupa lagi!"
             hide a_talk
-            jump cadangan_6
+            jump cadangan_6b
 
         "Ekonomi kapitalis pro investasi asing":
             hide screen timer_screen
@@ -1658,9 +1703,9 @@ label cadangan_6:
             k "Kapitalis?! Soekarno nasionalisasi perusahaan asing!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "Era ini justru menutup investasi asing, bukan membukanya!"
+            a "Era ini menutup investasi asing! Coba soal serupa lagi!"
             hide a_talk
-            jump cadangan_6
+            jump cadangan_6b
 
         "Ekonomi terpimpin dengan peran besar negara":
             hide screen timer_screen
@@ -1688,9 +1733,9 @@ label cadangan_6:
             k "Koperasi bukan inti Demokrasi Terpimpin!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "Ekonomi terpimpin—negara yang pegang kendali penuh!"
+            a "Ekonomi terpimpin—negara yang pegang kendali penuh! Coba lagi!"
             hide a_talk
-            jump cadangan_6
+            jump cadangan_6b
 
 label cadangan_7:
     show screen timer_screen(length=25.0)
@@ -1712,9 +1757,9 @@ label cadangan_7:
             k "Bukan 10! Kamu lupa langkah += dulu baru *=!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "x=5, lalu +=3 jadi 8, lalu *=2 jadi 16!"
+            a "x=5, lalu +=3 jadi 8, lalu *=2 jadi 16! Coba soal serupa!"
             hide a_talk
-            jump cadangan_7
+            jump cadangan_7b
 
         "13":
             hide screen timer_screen
@@ -1726,9 +1771,9 @@ label cadangan_7:
             k "13?! Kamu tidak mengalikan dengan 2!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "Setelah +=3 jadi 8, lalu *=2 jadi 16, bukan 13!"
+            a "Setelah +=3 jadi 8, lalu *=2 jadi 16! Coba soal serupa!"
             hide a_talk
-            jump cadangan_7
+            jump cadangan_7b
 
         "16":
             hide screen timer_screen
@@ -1760,6 +1805,147 @@ label cadangan_7:
             k "11?! Kamu salah urutan operasi!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "Ikuti urutan: +=3 dulu → 8, baru *=2 → 16!"
+            a "Ikuti urutan: +=3 dulu → 8, baru *=2 → 16! Coba soal serupa!"
             hide a_talk
-            jump cadangan_7
+            jump cadangan_7b
+
+
+label cadangan_6b:
+    show screen timer_screen(length=25.0)
+    show screen soal_panel(
+        nomor="6C-2",
+        tema="Sejarah – Orde Lama",
+        kode="",
+        pertanyaan="Indonesia keluar dari keanggotaan PBB\npada tahun 1965. Penyebab utamanya adalah..."
+    )
+
+    menu:
+        "Sengketa wilayah Papua dengan Belanda":
+            hide screen timer_screen
+            hide screen soal_panel
+            show screen feedback_screen("salah")
+            pause 1.6
+            hide screen feedback_screen
+            show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
+            k "Papua dan PBB berbeda konteksnya!"
+            hide k_angrytalk
+            show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
+            a "Masalah Papua sudah selesai sebelum 1965. Ini soal Malaysia!"
+            hide a_talk
+            jump cadangan_6b
+
+        "Protes atas diterimanya Malaysia sebagai anggota DK PBB":
+            hide screen timer_screen
+            hide screen soal_panel
+            $ fase3_benar += 1
+            $ quiz_score  += 1
+            show screen feedback_screen("berhasil")
+            pause 1.6
+            hide screen feedback_screen
+            show k_angrytalk at Position(xalign=0.5, yalign=0.3), getar with dissolve
+            k "Malaysia masuk DK PBB—Soekarno langsung keluar!"
+            hide k_angrytalk
+            show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
+            a "Tepat! Politik Konfrontasi total! Lanjut soal terakhir!"
+            hide a_talk
+            jump soal_7
+
+        "Penolakan terhadap bantuan Amerika Serikat":
+            hide screen timer_screen
+            hide screen soal_panel
+            show screen feedback_screen("salah")
+            pause 1.6
+            hide screen feedback_screen
+            show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
+            k "Bantuan AS bukan alasan keluar PBB!"
+            hide k_angrytalk
+            show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
+            a "Alasannya adalah Malaysia masuk Dewan Keamanan PBB!"
+            hide a_talk
+            jump cadangan_6b
+
+        "Konflik dengan negara Asia Tenggara lainnya":
+            hide screen timer_screen
+            hide screen soal_panel
+            show screen feedback_screen("salah")
+            pause 1.6
+            hide screen feedback_screen
+            show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
+            k "Terlalu umum! Ada satu negara spesifik yang jadi penyebabnya!"
+            hide k_angrytalk
+            show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
+            a "Malaysia masuk DK PBB—itulah pemicunya!"
+            hide a_talk
+            jump cadangan_6b
+
+label cadangan_7b:
+    show screen timer_screen(length=25.0)
+    show screen soal_panel(
+        nomor="7C-2",
+        tema="Python – Penamaan Variabel",
+        kode="",
+        pertanyaan="Manakah nama variabel yang TIDAK VALID\ndalam Python?"
+    )
+
+    menu:
+        "nilai_akhir":
+            hide screen timer_screen
+            hide screen soal_panel
+            show screen feedback_screen("salah")
+            pause 1.6
+            hide screen feedback_screen
+            show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
+            k "nilai_akhir valid! Underscore diperbolehkan!"
+            hide k_angrytalk
+            show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
+            a "Variabel boleh pakai underscore. Cari yang diawali angka!"
+            hide a_talk
+            jump cadangan_7b
+
+        "_nama":
+            hide screen timer_screen
+            hide screen soal_panel
+            show screen feedback_screen("salah")
+            pause 1.6
+            hide screen feedback_screen
+            show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
+            k "_nama valid! Underscore boleh di awal!"
+            hide k_angrytalk
+            show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
+            a "Diawali underscore itu valid di Python. Cari yang diawali angka!"
+            hide a_talk
+            jump cadangan_7b
+
+        "2data":
+            hide screen timer_screen
+            hide screen soal_panel
+            $ fase3_benar += 1
+            $ quiz_score  += 1
+            show screen feedback_screen("berhasil")
+            pause 1.6
+            hide screen feedback_screen
+            show k_angrytalk at Position(xalign=0.5, yalign=0.3), getar with dissolve
+            k "2data! Tidak boleh diawali angka—Python langsung error!"
+            hide k_angrytalk
+            play sound "audio/sfx/chapter 1/monster.mp3"
+            show bc_talk at Position(xalign=0.5, yalign=0.2), getar with dissolve
+            bc "TIDAK MUNGKIN... KAU BISA MEMECAHKAN SEMUANYA?!"
+            hide bc_talk
+            show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
+            a "SELESAI! Buta Cakil tidak bisa bertahan lagi!"
+            hide a_talk
+            jump boss_buta_cakil_menang
+
+        "dataKe2":
+            hide screen timer_screen
+            hide screen soal_panel
+            show screen feedback_screen("salah")
+            pause 1.6
+            hide screen feedback_screen
+            show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
+            k "dataKe2 valid! Angka boleh di tengah atau akhir!"
+            hide k_angrytalk
+            show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
+            a "Yang tidak boleh hanya angka DI AWAL nama variabel!"
+            hide a_talk
+            jump cadangan_7b
