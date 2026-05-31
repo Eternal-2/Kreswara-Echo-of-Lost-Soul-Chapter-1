@@ -73,7 +73,7 @@ label chapter_3:
 
 label chapter_4:
 
-    play music "audio/backsound/Chapter 4/game/audio/backsound/alexguz-the-wild-tribal-war_full_vocal_version-ethnic-east-african-386467.mp3" fadein 2.0
+    play music "audio/backsound/Chapter 4/alexguz-the-wild-tribal-war_full_vocal_version-ethnic-east-african-386467.mp3" fadein 2.0
     scene bg_batu with dissolve
     call screen chapter_title_screen(
         nomor    = "4",
