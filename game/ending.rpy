@@ -3,7 +3,7 @@ label ending_good:
     scene black with Dissolve(2.0)
     pause 1.0
 
-    play sound "audio/sfx/chapter 1/suara digital halus .mp3"
+    play sound "audio/sfx/ending/transisi_digital.mp3"
     scene black with dissolve
     pause 2.0
 
@@ -14,7 +14,7 @@ label ending_bad:
     scene black with Dissolve(2.0)
     pause 1.0
 
-    play sound "audio/sfx/chapter 1/suara digital halus .mp3"
+    play sound "audio/sfx/ending/transisi_digital.mp3"
     scene black with dissolve
     pause 2.0
 
@@ -23,7 +23,7 @@ label ending_bad:
 
 label scene_rumah_sakit_good:
 
-    scene bg_rumah_sakit with Dissolve(2.0)
+    scene rumah_sakit_good with Dissolve(2.0)
     play music "audio/backsound/ending/good_ending_ambient.mp3" fadein 2.0
     play sound "audio/sfx/ending/detak_jantung.mp3" loop
 
@@ -41,7 +41,7 @@ label scene_rumah_sakit_good:
     play sound "audio/sfx/ending/buku_dibuka.mp3"
 
     nr "Isi buku itu sangat beragam, mulai dari bait-bait puisi tentang cinta, lirik lagu bertema kasih, hingga beberapa cerita pendek mengenai bagaimana jadinya jika cinta mereka bersemi di kehidupan selanjutnya."
-    nr "Pada lembar paling awal, terdapat sesuatu yang mengganjal hatinya — sebuah foto dua orang yang sama-sama tidak pernah berani menyatakan perasaan masing-masing."
+    nr "Pada lembar paling awal, terdapat sesuatu yang mengganjal hatinya sebuah foto dua orang yang sama-sama tidak pernah berani menyatakan perasaan masing-masing."
 
     centered "BIODATA"
     centered "Nama: Asleen Sankarilla"
@@ -57,21 +57,21 @@ label scene_rumah_sakit_good:
     centered "Catatan: 'Moga-moga kita satu kampus, hehe.'"
     centered "Note: Tes masuk universitas sudah di depan mata. Rencananya aku dan dia bakal berangkat bareng naik motor. Moga-moga kita aman di jalan, dan kita berdua masuk ke jurusan yang kita pengenin, hehe."
 
-    asleen "Tapi pada akhirnya, kita tidak pernah sampai ke tempat tes itu ya, Kreswara Radyana."
+    a "Tapi pada akhirnya, kita tidak pernah sampai ke tempat tes itu ya, Kreswara Radyana."
 
     play sound "audio/sfx/ending/napas_bergetar.mp3"
 
-    asleen "Kau ingat tidak? Bagaimana dulu kita hanyalah remaja penuh harapan yang akan berangkat melaksanakan tes masuk universitas?"
-    asleen "Namun, kecelakaan itu menghancurkan segalanya. Setidaknya, begitulah bagiku."
-    asleen "Melihatmu koma dan diam seperti ini adalah takdir yang sama sekali tidak pernah kubayangkan akan berakhir begini."
-    asleen "Namun, karena itulah semuanya terasa datang terlambat, ya?"
-    asleen "Bagaimana dulu aku akhirnya berniat memberitahumu bahwa aku mencintaimu."
-    asleen "Mencintai dirimu yang selalu menjadi angin sejuk di tengah badai hidupku."
-    asleen "Namun, aku tidak pernah menyangka ternyata kau memendam semua itu juga. Sungguh, aku tidak tahu. Maaf."
-    asleen "Aku masih mengingatnya dengan jelas ketika beberapa waktu lalu ibumu memberikan buku catatanmu."
-    asleen "Namun, aku justru menemukan hal paling menarik di sana — diriku sendiri."
-    asleen "Jiwaku yang kau simpan dalam berbagai bentuk di dalam buku itu."
-    asleen "Dan game ini… baru saja kumainkan. Aku menemukannya dari sebuah kode yang, untungnya, berhasil kupecahkan."
+    a "Kau ingat tidak? Bagaimana dulu kita hanyalah remaja penuh harapan yang akan berangkat melaksanakan tes masuk universitas?"
+    a "Namun, kecelakaan itu menghancurkan segalanya. Setidaknya, begitulah bagiku."
+    a "Melihatmu koma dan diam seperti ini adalah takdir yang sama sekali tidak pernah kubayangkan akan berakhir begini."
+    a "Namun, karena itulah semuanya terasa datang terlambat, ya?"
+    a "Bagaimana dulu aku akhirnya berniat memberitahumu bahwa aku mencintaimu."
+    a "Mencintai dirimu yang selalu menjadi angin sejuk di tengah badai hidupku."
+    a "Namun, aku tidak pernah menyangka ternyata kau memendam semua itu juga. Sungguh, aku tidak tahu. Maaf."
+    a "Aku masih mengingatnya dengan jelas ketika beberapa waktu lalu ibumu memberikan buku catatanmu."
+    a "Namun, aku justru menemukan hal paling menarik di sana — diriku sendiri."
+    a "Jiwaku yang kau simpan dalam berbagai bentuk di dalam buku itu."
+    a "Dan game ini… baru saja kumainkan. Aku menemukannya dari sebuah kode yang, untungnya, berhasil kupecahkan."
 
     jump puzzle_kode_good
 
@@ -84,7 +84,7 @@ label puzzle_kode_good:
     nr "Asleen mengingat kembali saat dia sangat bersusah payah memecahkan kode itu."
 
     menu:
-        caption "Kode apa yang tertulis di halaman terakhir buku?\n\n01000001 01010011 01001100 01000101 01000101 01001110"
+        nr "Kode apa yang tertulis di halaman terakhir buku?\n\n01000001 01010011 01001100 01000101 01000101 01001110"
 
         "ASLEEN":
             play sound "audio/sfx/ending/notif_berhasil.mp3"
@@ -104,15 +104,20 @@ label puzzle_kode_good:
 label puzzle_kode_good_berhasil:
 
     nr "Sebuah titik kehidupan datang menyeruak di tengah lamunan tak berujung milik Asleen."
-    nr "Harapan yang selama ini selalu ia simpan di wajahnya — harapan bahwa suatu hari nanti Kreswara akan bangun."
+    nr "Harapan yang selama ini selalu ia simpan di wajahnya harapan bahwa suatu hari nanti Kreswara akan bangun."
     nr "Dan akhirnya, saat itu tiba."
 
     stop sound
+
+    scene black with Dissolve(2.0)
     play sound "audio/sfx/ending/monitor_berubah.mp3"
 
     nr "Sepasang mata jernih yang masih kebingungan mencari cahaya perlahan menatap sosok yang selama ini ia dambakan."
 
     play sound "audio/sfx/ending/napas_pelan.mp3"
+    pause 1.0
+
+    scene rumah_sakit_good_bangun with Dissolve(2.0)
 
     nr "Kreswara akhirnya bangun."
     nr "Dan kini ia tahu, Asleen merasakan cinta yang sama dengannya."
@@ -129,7 +134,8 @@ label puzzle_kode_good_berhasil:
     centered "\"Cahaya yang Akhirnya Tiba\""
     pause 2.0
 
-    centered "Kreswara dan Asleen — dua jiwa yang lama menahan kata,"
+    stop sound
+    centered "Kreswara dan As-leen dua jiwa yang lama menahan kata,"
     centered "akhirnya menemukan jalannya pulang."
     pause 2.0
 
@@ -143,12 +149,12 @@ label puzzle_kode_good_berhasil:
 
     scene black with Dissolve(2.0)
     pause 1.0
-    jump chapter_select_screen
+    $ renpy.full_restart()
 
 
 label scene_rumah_sakit_bad:
 
-    scene bg_rumah_sakit with Dissolve(2.0)
+    scene rumah_sakit_bad with Dissolve(2.0)
     play music "audio/backsound/ending/bad_ending_ambient.mp3" fadein 2.0
     play sound "audio/sfx/ending/detak_jantung.mp3" loop
     play sound "audio/sfx/ending/hujan_samar.mp3" loop
@@ -178,16 +184,16 @@ label scene_rumah_sakit_bad:
     centered "Jurusan yang dia inginkan: Sastra Indonesia"
     centered "Note: Tes masuk universitas sudah di depan mata. Rencananya aku dan dia bakal berangkat bareng naik motor. Moga-moga kita aman di jalan, dan kita berdua masuk ke jurusan yang kita pengenin, hehe."
 
-    asleen "Tapi pada akhirnya, kita tidak pernah sampai ke tempat tes itu ya, Kreswara Radyana."
+    a "Tapi pada akhirnya, kita tidak pernah sampai ke tempat tes itu ya, Kreswara Radyana."
 
-    asleen "Kau ingat tidak? Bagaimana dulu kita hanyalah remaja penuh harapan?"
-    asleen "Namun, kecelakaan itu menghancurkan segalanya. Kejadian yang membuat semuanya menjadi sendu."
-    asleen "Melihatmu koma dan diam seperti ini adalah takdir yang sama sekali tidak pernah kubayangkan."
-    asleen "Namun, karena itulah semuanya terasa datang terlambat, ya?"
-    asleen "Bagaimana dulu aku akhirnya berniat memberitahumu bahwa aku mencintaimu."
-    asleen "Mencintai dirimu yang selalu menjadi angin sejuk di tengah badai hidupku."
-    asleen "Namun, aku tidak pernah menyangka ternyata kau memendam semua itu juga. Maaf."
-    asleen "Dan game ini… baru saja kumainkan. Aku menemukannya dari sebuah kode yang berhasil kupecahkan."
+    a "Kau ingat tidak? Bagaimana dulu kita hanyalah remaja penuh harapan?"
+    a "Namun, kecelakaan itu menghancurkan segalanya. Kejadian yang membuat semuanya menjadi sendu."
+    a "Melihatmu koma dan diam seperti ini adalah takdir yang sama sekali tidak pernah kubayangkan."
+    a "Namun, karena itulah semuanya terasa datang terlambat, ya?"
+    a "Bagaimana dulu aku akhirnya berniat memberitahumu bahwa aku mencintaimu."
+    a "Mencintai dirimu yang selalu menjadi angin sejuk di tengah badai hidupku."
+    a "Namun, aku tidak pernah menyangka ternyata kau memendam semua itu juga. Maaf."
+    a "Dan game ini… baru saja kumainkan. Aku menemukannya dari sebuah kode yang berhasil kupecahkan."
 
     jump puzzle_kode_bad
 
@@ -199,7 +205,7 @@ label puzzle_kode_bad:
     nr "Asleen mengingat kembali saat dia sangat bersusah payah memecahkan kode itu."
 
     menu:
-        caption "Kode apa yang tertulis di halaman terakhir buku?\n\n01000001 01010011 01001100 01000101 01000101 01001110"
+        nr "Kode apa yang tertulis di halaman terakhir buku?\n\n01000001 01010011 01001100 01000101 01000101 01001110"
 
         "ASLEEN":
             play sound "audio/sfx/ending/notif_berhasil.mp3"
@@ -223,7 +229,7 @@ label puzzle_kode_bad_berhasil:
 
     play sound "audio/sfx/ending/kursi_bergeser.mp3"
 
-    asleen "Aku pulang dulu yah… aku harap kamu membaik dan kita bisa bepergian kemana-mana lagi sama-sama."
+    a "Aku pulang dulu yah… aku harap kamu membaik dan kita bisa bepergian kemana-mana lagi sama-sama."
 
     play sound "audio/sfx/ending/langkah_menjauh.mp3"
 
@@ -233,7 +239,7 @@ label puzzle_kode_bad_berhasil:
 
     play sound "audio/sfx/ending/burung_pagi.mp3"
 
-    asleen "Semoga dia suka dengan buahnya…"
+    a "Semoga dia suka dengan buahnya…"
 
     nr "Dengan perlahan ia melangkahkan kaki kecilnya menuju ruang 07 yang biasa ia kunjungi."
     nr "Ia membuka pintu itu dengan satu tangan dan tangan lainnya memegang bunga dan buah kesukaan Wara."
@@ -280,4 +286,4 @@ label puzzle_kode_bad_berhasil:
 
     scene black with Dissolve(2.0)
     pause 1.0
-    jump chapter_select_screen
+    $ renpy.full_restart()

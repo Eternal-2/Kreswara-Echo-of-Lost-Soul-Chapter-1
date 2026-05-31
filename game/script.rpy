@@ -1,12 +1,5 @@
 # The script of the game goes in this file.
 
-# Declare characters used by this game.
-
-# The game starts here.
-
-# The script of the game goes in this file.
-
-# The game starts here.
 label splashscreen:
 
     scene black
@@ -32,9 +25,13 @@ label start:
 
 label chapter_1:
 
-    scene bg_desa
-    with fade
-
+    play music "audio/backsound/Chapter 1/[Scene Suasana Desa].mp3" fadein 2.0
+    scene bg_desa_siang with dissolve
+    call screen chapter_title_screen(
+        nomor    = "1",
+        judul    = "Malam Mencekam",
+        subjudul = "Siapkah kamu?"
+    )
     jump chapter1_full
 
 
@@ -44,9 +41,13 @@ label chapter_1:
 
 label chapter_2:
 
-    "Chapter 2 - Bayangan di Hutan"
-    "Konten chapter 2 belum ditambahkan."
-
+    play music "audio/backsound/Chapter 2/royaltyfreemusicstudio-mystic-fantasy-ambience-441255.mp3" fadein 2.0
+    scene bg_ch2_nav_error with dissolve
+    call screen chapter_title_screen(
+        nomor    = "2",
+        judul    = "Perburuan Fajar",
+        subjudul = "Bahaya ada di setiap langkah"
+    )
     jump chapter2_full
 
 
@@ -56,9 +57,13 @@ label chapter_2:
 
 label chapter_3:
 
-    "Chapter 3 - Rahasia Kuil"
-    "Konten chapter 3 belum ditambahkan."
-
+    play music "audio/backsound/Chapter 3/delosound-emotional-violin-strings-453280.mp3" fadein 2.0
+    scene bg_panggung_dimensi_lain with fade
+    call screen chapter_title_screen(
+        nomor    = "3",
+        judul    = "Jebakan di Balik Ketenangan",
+        subjudul = "Waspada di balik ketenangan"
+    )
     jump chapter3_full
 
 
@@ -68,7 +73,11 @@ label chapter_3:
 
 label chapter_4:
 
-    "Chapter 4 - Pertempuran Jiwa"
-    "Konten chapter 4 belum ditambahkan."
-
-    return
+    play music "audio/backsound/Chapter 4/game/audio/backsound/alexguz-the-wild-tribal-war_full_vocal_version-ethnic-east-african-386467.mp3" fadein 2.0
+    scene bg_batu with dissolve
+    call screen chapter_title_screen(
+        nomor    = "4",
+        judul    = "Pertempuran Jiwa",
+        subjudul = "Satu pilihan, satu takdir"
+    )
+    jump chapter4_full

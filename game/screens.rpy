@@ -261,7 +261,7 @@ screen choice(items):
     if teks_panjang:
         vbox:
             xalign 0.5
-            yalign 0.72
+            yalign 0.80
             spacing 20
 
             for i in items:
@@ -398,7 +398,6 @@ style navigation_button_text:
 screen main_menu():
     tag menu
     add "gui/main_menu.png" xalign 0.5 yalign 0.5 fit "cover"
-
     vbox:
             xalign 0.2
             yalign 0.5

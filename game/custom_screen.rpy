@@ -1,43 +1,65 @@
-init python:
-    def countdown(st, at, length=50.0):
-        remaining = max(0.0, length - st)
-        return Text("%.1f" % remaining, color="#ff4444", size=40, bold=True), 0.05
+screen chapter_title_screen(nomor="1", judul="", subjudul=""):
+    modal True
 
-    def countdown_bar(st, at, length=50.0):
-        remaining = max(0.0, length - st)
-        ratio = remaining / length  # 1.0 = penuh, 0.0 = habis
+    # Overlay gelap semi-transparan di atas background
+    add "#000000a0"
 
-        # Warna bar berubah: hijau → kuning → merah
-        if ratio > 0.5:
-            r = int(255 * (1.0 - ratio) * 2)
-            g = 220
-        else:
-            r = 220
-            g = int(220 * ratio * 2)
-        color = "#{:02x}{:02x}00".format(min(r, 220), min(g, 220))
+    # Garis dekorasi atas
+    frame:
+        xalign 0.5
+        yalign 0.42
+        xsize 700
+        ysize 4
+        background "#c8a96e"
 
-        bar_width = int(600 * ratio)
-        bar_width = max(0, bar_width)
+    # Konten utama
+    vbox:
+        xalign 0.5
+        yalign 0.5
+        spacing 18
 
-        return Fixed(
-            Solid(color, xsize=bar_width, ysize=18),
-            xsize=600, ysize=18
-        ), 0.05
+        # Label chapter kecil
+        text ("CHAPTER  " + nomor):
+            xalign 0.5
+            size 18
+            color "#c8a96ecc"
+            kerning 5.0
+            bold True
 
-    def countdown_text_color(st, at, length=50.0):
-        remaining = max(0.0, length - st)
-        ratio = remaining / length
-        if ratio <= 0.25:
-            # Kedip merah saat kritis
-            blink = int(st * 4) % 2
-            col = "#ff2222" if blink else "#ff8888"
-        elif ratio <= 0.5:
-            col = "#ffaa00"
-        else:
-            col = "#88ffcc"
-        return Text("%.0f" % remaining, color=col, size=58, bold=True,
-                    outlines=[(3, "#000000aa", 0, 0)]), 0.05
+        # Judul besar
+        text judul:
+            xalign 0.5
+            size 52
+            color "#f5ead8"
+            bold True
+            text_align 0.5
 
+        # Sub-judul / tagline
+        if subjudul != "":
+            text ("\" " + subjudul + " \""):
+                xalign 0.5
+                size 22
+                color "#aaaaaa"
+                text_align 0.5
+                italic True
+
+    # Garis dekorasi bawah
+    frame:
+        xalign 0.5
+        yalign 0.60
+        xsize 700
+        ysize 4
+        background "#c8a96e"
+
+
+    # Klik di mana saja untuk lanjut
+    key "K_RETURN" action Return()
+    key "K_SPACE"  action Return()
+    imagebutton:
+        idle Solid("#00000000")
+        xfill True
+        yfill True
+        action Return()
 
 screen timer_screen(length=50.0, on_timeout="waktu_habis_boss"):
     zorder 200
@@ -133,7 +155,6 @@ transform kalah_title_in:
     linear 0.5 alpha 1.0 yoffset 0
 
 screen kalah_boss_screen():
-    add "images/BG/desa digital + anomali .png" zoom 1.0 at kalah_fadein
 
     vbox:
         xalign 0.5 yalign 0.45 spacing 50
@@ -162,11 +183,11 @@ screen soal_panel(nomor="1", tema="", kode="", pertanyaan=""):
     frame:
         xalign 0.5
         yalign 0.0
-        yoffset 190
-        xsize 900
-        
+        yoffset 140
+        xsize 980
+        ysize 310
         xpadding 40
-        ypadding 28
+        ypadding 18
         background Frame("#0e1016f0", 14, 14)
 
         vbox:
@@ -235,3 +256,94 @@ screen dialog_choice_hint(mode="cari"):
         add "images/ASSET/DIALOG CHOICE/cari informasi.png" xalign 0.85 yalign 0.85 zoom 0.28
     else:
         add "images/ASSET/DIALOG CHOICE/serap roh.png"      xalign 0.85 yalign 0.85 zoom 0.28
+
+screen pilihan_ending_screen():
+    modal True
+
+    add "#000000dd"
+
+    vbox:
+        xalign 0.5
+        yalign 0.5
+        spacing 30
+
+        text "Kreswara berdiri di persimpangan terakhir.":
+            xalign 0.5
+            size 22
+            color "#ddd8cc"
+            text_align 0.5
+            italic True
+
+        text "Apa yang akan ia pilih?":
+            xalign 0.5
+            size 18
+            color "#aaaaaa"
+            text_align 0.5
+
+        null height 20
+
+        ## Pilihan Bad Ending — Tetap tinggal
+        frame:
+            xalign 0.5
+            xsize 620
+            ysize 100
+            background Frame("#1a0a0aee", 8, 8)
+            hover_background Frame("#3d0000ee", 8, 8)
+            xpadding 30
+            ypadding 20
+
+            button:
+                xfill True
+                yfill True
+                action Return("bad")
+
+                vbox:
+                    xalign 0.5
+                    yalign 0.5
+                    spacing 6
+
+                    text "Tetap tinggal di dunia ini":
+                        xalign 0.5
+                        size 22
+                        color "#ff6b6b"
+                        bold True
+                        text_align 0.5
+
+                    text "Biarkan semua ini berlanjut selamanya...":
+                        xalign 0.5
+                        size 14
+                        color "#aa5555"
+                        text_align 0.5
+
+        ## Pilihan Good Ending — Keluar ke dunia nyata
+        frame:
+            xalign 0.5
+            xsize 620
+            ysize 100
+            background Frame("#0a1a0aee", 8, 8)
+            hover_background Frame("#003d00ee", 8, 8)
+            xpadding 30
+            ypadding 20
+
+            button:
+                xfill True
+                yfill True
+                action Return("good")
+
+                vbox:
+                    xalign 0.5
+                    yalign 0.5
+                    spacing 6
+
+                    text "Keluar menghadapi dunia nyata":
+                        xalign 0.5
+                        size 22
+                        color "#6bffb8"
+                        bold True
+                        text_align 0.5
+
+                    text "Kembali kepada mereka yang menunggu...":
+                        xalign 0.5
+                        size 14
+                        color "#55aa88"
+                        text_align 0.5

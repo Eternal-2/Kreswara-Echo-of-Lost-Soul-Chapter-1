@@ -602,11 +602,15 @@ label boss_buta_cakil_start:
     play music "audio/backsound/Chapter 1/boss_1-buta_cakil.mp3" fadein 0.5
     play sound "audio/sfx/chapter 1/8.suara distorsi audio.mp3"
 
-    show screen radar_roh_screen(level=1)    
-    pause 2.5
+    $ _skipping = False
+    show screen radar_roh_screen(level=1)
+    $ renpy.pause(2.0, hard=True)
+    $ _skipping = True
 
+    $ _skipping = False
     show screen state_roh_screen("WASPADA")
-    pause 2.5
+    $ renpy.pause(2.0, hard=True)
+    $ _skipping = True
 
     stop sound
 
@@ -1350,7 +1354,6 @@ label chapter1_ending:
     pause 1.0
 
     $ persistent.chapter2_unlocked = True
-
     $ renpy.full_restart()
 
 
