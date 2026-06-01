@@ -142,10 +142,13 @@ image bg_menang_dur       = im.Scale("images/BG/BG Chapter 4/wara mengalahkan du
 image bg_langit_jingga_virtual = im.Scale("images/BG/BG Chapter 4/langit senja setelah kemenangan melawan duryodana .png", 1920, 1080)
 image bg_langit_jingga_pisah = im.Scale("images/BG/BG Chapter 4/perpisahan wara dengan as-leen .png", 1920, 1080)
 
-
-image rumah_sakit_good  =  im.Scale("images/BG/Ending/GOOD ENDING .png", 1920, 1080)
+# Ending
+image rumah_sakit_good         =  im.Scale("images/BG/Ending/GOOD ENDING .png", 1920, 1080)
 image rumah_sakit_good_bangun  =  im.Scale("images/BG/Ending/GOOD ENDING WARA BANGUN .png", 1920, 1080)
-image rumah_sakit_bad   =  im.Scale("images/BG/Ending/BAD ENDING .png", 1920, 1080)
+image rumah_sakit_bad          =  im.Scale("images/BG/Ending/BAD ENDING .png", 1920, 1080)
+image asleen_jalan             =  im.Scale("images/BG/Ending/asleen meninggalkan lorong rumah sakit.png", 1920, 1080)4
+image laptop_wara              =  im.Scale("images/BG/Ending/file laptop wara.png", 1920, 1080)
+image pecahin_kode             =  im.Scale("images/BG/Ending/asleen coba memecahkan kode di laptop wara.png", 1920, 1080)
 
 image effect_1 = Movie(play="images/EFFECT/1.webm", loop=True, size=(1920, 3413))
 image effect_2 = Movie(play="images/EFFECT/2.webm", loop=True, size=(1920, 3413))

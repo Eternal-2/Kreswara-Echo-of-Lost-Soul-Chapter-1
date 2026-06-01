@@ -60,6 +60,7 @@ label scene_rumah_sakit_good:
     a "Tapi pada akhirnya, kita tidak pernah sampai ke tempat tes itu ya, Kreswara Radyana."
 
     play sound "audio/sfx/ending/napas_bergetar.mp3"
+    centered "Asleen mengingat semua hal beberapa bulan yang terjadi kepadanya."
 
     a "Kau ingat tidak? Bagaimana dulu kita hanyalah remaja penuh harapan yang akan berangkat melaksanakan tes masuk universitas?"
     a "Namun, kecelakaan itu menghancurkan segalanya. Setidaknya, begitulah bagiku."
@@ -71,6 +72,8 @@ label scene_rumah_sakit_good:
     a "Aku masih mengingatnya dengan jelas ketika beberapa waktu lalu ibumu memberikan buku catatanmu."
     a "Namun, aku justru menemukan hal paling menarik di sana — diriku sendiri."
     a "Jiwaku yang kau simpan dalam berbagai bentuk di dalam buku itu."
+
+    scene laptop_wara with Dissolve
     a "Dan game ini… baru saja kumainkan. Aku menemukannya dari sebuah kode yang, untungnya, berhasil kupecahkan."
 
     jump puzzle_kode_good
@@ -79,6 +82,7 @@ label scene_rumah_sakit_good:
 
 label puzzle_kode_good:
 
+    scene pecahin_kode with Dissolve(2.0)
     play sound "audio/sfx/chapter 1/keyboar komputer .mp3"
 
     nr "Asleen mengingat kembali saat dia sangat bersusah payah memecahkan kode itu."
@@ -131,7 +135,7 @@ label puzzle_kode_good_berhasil:
     play music "audio/backsound/ending/good_ending_theme.mp3" fadein 2.0
 
     centered "── GOOD ENDING ──"
-    centered "\"Cahaya yang Akhirnya Tiba\""
+    centered "\"Pulang ke Tempat yang Selalu Ada\""
     pause 2.0
 
     stop sound
@@ -193,6 +197,8 @@ label scene_rumah_sakit_bad:
     a "Bagaimana dulu aku akhirnya berniat memberitahumu bahwa aku mencintaimu."
     a "Mencintai dirimu yang selalu menjadi angin sejuk di tengah badai hidupku."
     a "Namun, aku tidak pernah menyangka ternyata kau memendam semua itu juga. Maaf."
+
+    scene laptop_wara with Dissolve
     a "Dan game ini… baru saja kumainkan. Aku menemukannya dari sebuah kode yang berhasil kupecahkan."
 
     jump puzzle_kode_bad
@@ -200,6 +206,7 @@ label scene_rumah_sakit_bad:
 
 label puzzle_kode_bad:
 
+    scene pecahin_kode with Dissolve(2.0)
     play sound "audio/sfx/ending/keyboard_perlahan.mp3"
 
     nr "Asleen mengingat kembali saat dia sangat bersusah payah memecahkan kode itu."
@@ -238,6 +245,7 @@ label puzzle_kode_bad_berhasil:
     nr "Ditambah dengan buah apel yang sangat Wara sukai."
 
     play sound "audio/sfx/ending/burung_pagi.mp3"
+    scene asleen_jalan with Dissolve
 
     a "Semoga dia suka dengan buahnya…"
 
@@ -269,7 +277,7 @@ label puzzle_kode_bad_berhasil:
     play music "audio/backsound/ending/bad_ending_theme.mp3" fadein 2.0
 
     centered "── BAD ENDING ──"
-    centered "\"Terlambat\""
+    centered "\"Kata yang Tak Pernah Sampai\""
     pause 2.0
 
     centered "Kreswara dan Asleen — dua jiwa yang lama menahan kata,"

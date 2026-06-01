@@ -302,14 +302,14 @@ screen pilihan_ending_screen():
                     yalign 0.5
                     spacing 6
 
-                    text "Tetap tinggal di dunia ini":
+                    text "Pandang wajah itu untuk terakhir kalinya":
                         xalign 0.5
                         size 22
                         color "#ff6b6b"
                         bold True
                         text_align 0.5
 
-                    text "Biarkan semua ini berlanjut selamanya...":
+                    text "Karena setelah ini, tidak ada lagi yang tersisa...":
                         xalign 0.5
                         size 14
                         color "#aa5555"
@@ -335,14 +335,14 @@ screen pilihan_ending_screen():
                     yalign 0.5
                     spacing 6
 
-                    text "Keluar menghadapi dunia nyata":
+                    text "Beritahu dirinya perasaan yang sudah kau rasakan":
                         xalign 0.5
                         size 22
                         color "#6bffb8"
                         bold True
                         text_align 0.5
 
-                    text "Kembali kepada mereka yang menunggu...":
+                    text "Sebelum semuanya terlambat untuk diucapkan...":
                         xalign 0.5
                         size 14
                         color "#55aa88"

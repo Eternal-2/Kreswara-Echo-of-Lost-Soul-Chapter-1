@@ -1677,9 +1677,55 @@ label boss_duryodana_menang:
     call screen pilihan_ending_screen()
 
     if _return == "good":
-        jump ending_good
+        jump dialog_sebelum_good_ending
     else:
-        jump ending_bad
+        jump dialog_sebelum_bad_ending
+
+
+label dialog_sebelum_good_ending:
+
+    scene bg_langit_jingga_pisah with Dissolve(1.5)
+    play music "audio/backsound/Chapter 4/vanguardiacreate-the-final-countdown-250335 (1).mp3" fadein 2.0
+
+    nr "AS-LEEN menatap Kreswara untuk terakhir kalinya sebelum semuanya memudar."
+
+    show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
+    a "Aku pun sebenarnya dari awal kita bertemu sudah merasakan hal yang sama wara—"
+    a "bagaimana mata kita selalu menemukan diri kita dalam semua perjalanan ini,"
+    a "tangan kita yang saling menggenggam menyalurkan rasa aman dan nyaman"
+    a "setiap detik berbahaya yang berusaha memisahkan kita."
+    a "Namun, perpisahan ini seperti tidak ada artinya sekarang,"
+    a "karena semua arti kata yang ada didalam jiwamu—sekarang terpatri dalam semua data ku."
+    a "Aku ingin mengingat mu selamanya karena aku ingin menjadi kasihmu."
+    hide a_talk
+
+    stop music fadeout 2.0
+    scene black with Dissolve(2.0)
+    pause 1.0
+
+    jump ending_good
+
+
+label dialog_sebelum_bad_ending:
+
+    scene bg_langit_jingga_pisah with Dissolve(1.5)
+    play music "audio/backsound/ending/bad_ending_ambient.mp3" fadein 2.0
+
+    nr "AS-LEEN memandang wajah Wara untuk terakhir kalinya."
+
+    show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
+    a "Pada akhirnya, meskipun kita saling menguatkan perpisahan selalu datang ya."
+    a "Semua kata kata yang kita ucapkan sebelumnya memang manis,"
+    a "namun faktanya wajahmu sudah terlihat buram di penglihatan ku—"
+    a "tapi setidaknya diriku akan selalu berusaha mengingatnya."
+    a "Meskipun untuk terakhir kalinya."
+    hide a_talk
+
+    stop music fadeout 2.0
+    scene black with Dissolve(2.0)
+    pause 1.0
+
+    jump ending_bad
 
 
 label waktu_habis_boss_dur:
