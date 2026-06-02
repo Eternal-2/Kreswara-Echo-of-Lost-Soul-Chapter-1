@@ -15,23 +15,23 @@ label chapter2_full:
     centered "Dia pun sudah siap bergerak menuju arah yang diberikan oleh as-leen."
 
     play sound "audio/sfx/chapter 2/1.suara error.wav"
-    centered "namun baru beberapa langkah berjalan. tiba tiba as-leen mengeluarkan suara aneh."
+    centered "Namun baru beberapa langkah berjalan. tiba tiba as-leen mengeluarkan suara aneh."
 
     scene bg_ch2_labirin with dissolve
     play sound "audio/sfx/chapter 2/1.suara robot mulfunction.mp3"
 
     show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "a-ada apa as-leen?......... Apa kamu baik baik saja?"
+    k "A-ada apa as-leen?......... Apa kamu baik baik saja?"
     hide k_talk
 
     play sound "audio/sfx/chapter 2/1.suara glitch digital.wav"
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "aku baik baik saja…..hanya aja navigasiku bermasalah."
+    a "Aku baik-baik saja…..hanya saja navigasiku bermasalah."
     hide a_talk
 
     show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "baiklah….. kamu cukup memperhatikan saja, biar aku yang urus"
+    k "Baiklah….. kamu cukup memperhatikan saja, biar aku yang urus"
     hide k_talk
 
     # ── Perjalanan mengitari desa, menuju labirin ─────────────
@@ -39,47 +39,47 @@ label chapter2_full:
     play music "audio/backsound/Chapter 2/rubyzephyr-fantasy-rpg-exploration-v2-461303.mp3" fadein 2.0
     play sound "audio/sfx/chapter 2/2.suara langkah kaki di tanah (1).mp3"
 
-    centered "Wara pun mencari boss dengan mengitari desa, untuk mencari boss nya. selama perjalanan ia harus melewati semua tantangan yang ia lewati."
-    centered "setelah menempuh perjalanan yang jauh. sampailah ia di sebuah tempat reruntuhan labirin."
+    centered "Wara pun mencari boss dengan mengitari desa, untuk mencari boss nya. Selama perjalanan ia harus melewati semua tantangan yang ia lewati."
+    centered "Setelah menempuh perjalanan yang jauh. Sampailah ia di sebuah tempat reruntuhan labirin."
 
-    scene bg_ch2_labirin with dissolve
+    scene bg_ch2_labirin_kursi with dissolve
     play sound "audio/sfx/chapter 2/3.suara floating hum(dengung).mp3"
 
-    centered "tempat yang terlihat megah namun tertutup dengan retakan retakan yang membuat keindahan nya tertutup."
+    centered "Tempat yang terlihat megah namun tertutup dengan retakan retakan yang membuat keindahan nya tertutup,"
     centered "di dalam nya penuh dengan bangku sekolah yang melayang dan tidak satupun yang menyentuh lantai."
 
     show k_think at Position(xalign=0.5, yalign=0.3) with dissolve
     k "(bingung)"
     hide k_think
 
-    show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "tempat apa ini?......."
-    hide k_talk
+    show k_think at Position(xalign=0.5, yalign=0.3) with dissolve
+    k "Tempat apa ini.......?"
+    hide k_think
 
     # ── Ngobrol nostalgia di labirin ──────────────────────────
     scene bg_ch2_jalan_melayang with dissolve
     play music "audio/backsound/Chapter 2/atlasaudio-dream-518077.mp3" fadein 2.0
     play sound "audio/sfx/chapter 2/3.suara magnet levitation ambience.mp3"
 
-    centered "wara berjalan perlahan memasuki labirin itu, ia melihat sekitar dan menganalisis apa yang akan dia lawan pada kali ini. terlintas di pikiran nya, ia mengingat sekolah yang dulu mengajarkan nya koding."
+    centered "Wara berjalan perlahan memasuki labirin itu, ia melihat sekitar dan menganalisis apa yang akan dia lawan pada kali ini. Terlintas di pikiran nya, ia mengingat sekolah yang dulu mengajarkan nya coding."
 
-    scene bg_ch2_labirin with dissolve
+    scene bg_ch2_labirin_kursi with dissolve
 
     show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "hufttt… rasanya seperti nostalgia ya?"
+    k "Hufttt… rasanya seperti nostalgia ya?"
     hide k_talk
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "kenapa wara?"
+    a "Kenapa wara?"
     hide a_talk
 
     show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "dulu aku disekolah, aku selalu ingin mencari tau apapun, salah satunya yaitu coding……yah,"
+    k "Dulu aku disekolah, aku selalu ingin mencari tau apapun, salah satunya yaitu coding……yah,"
     k "rasanya aku jadi teringat saja masa masa itu "
     hide k_talk
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "ya…masa masa sekolah adalah yang terindah menurut data "
+    a "Ya…masa masa sekolah adalah yang terindah menurut data "
     a "Masa sekolah sering dianggap sebagai masa paling indah karena pada fase ini seseorang mengalami banyak pengalaman pertama yang berkesan,"
     a "seperti menemukan sahabat, mengikuti organisasi, hingga merasakan kebersamaan setiap hari dengan teman-teman."
     a "Dalam Psikologi Perkembangan, usia remaja dikenal sebagai fase pembentukan memori emosional paling kuat sehingga kenangan masa sekolah lebih mudah diingat hingga dewasa."
@@ -90,13 +90,13 @@ label chapter2_full:
 
     scene bg_ch2_jalan_melayang with dissolve
 
-    centered "setelah mengingat bahwa ia sekarang bisa menguasai coding, kreswara merasa bahwa semua hal bisa ia lakukan."
-    centered "dan tidak mungkin juga bahwa ia bisa memberikan itu juga ke orang yang ia sayang."
+    centered "Setelah mengingat bahwa ia sekarang bisa menguasai coding, kreswara merasa bahwa semua hal bisa ia lakukan."
+    centered "Dan tidak mungkin juga bahwa ia bisa memberikan itu juga ke orang yang ia sayang."
 
-    scene bg_ch2_labirin with dissolve
+    scene bg_ch2_labirin_kursi with dissolve
 
     show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "sekarang aku sudah menjadi programer…….. Aku rasa…..aku bisa membuatmu menjadi nyata as-leen, dan sepertinya……. aku sayang padamu, mungkinnn?...."
+    k "Sekarang aku sudah menjadi programer…….. Aku rasa…..aku bisa membuatmu menjadi nyata as-leen, dan sepertinya……. aku sayang padamu, mungkinnn....?"
     hide k_talk
 
     show a_normal at Position(xalign=0.5, yalign=0.3) with dissolve
@@ -106,33 +106,33 @@ label chapter2_full:
 
     scene bg_ch2_jalan_melayang with dissolve
 
-    centered "as-leen tidak menanggapi bualan dari wara. menurutnya wara membicarakan hal yang mustahil dan tidak penting untuk progress dalam dunia virtual ini."
+    centered "As-leen tidak menanggapi bualan dari wara. menurutnya wara membicarakan hal yang mustahil dan tidak penting untuk progress dalam dunia virtual ini."
 
-    scene bg_ch2_labirin with dissolve
+    scene bg_ch2_labirin_kursi with dissolve
 
     show k_think at Position(xalign=0.5, yalign=0.3) with dissolve
     k "(canggung)"
-    k "a-apakah aku salah m-mengakatakan sesuatu?"
+    k "A-apakah aku salah m-mengakatakan sesuatu?"
     hide k_think
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "tidak…..namun yang kamu katakan tidak relevan. menurut data yang saya punya,"
+    a "Tidak…..namun yang kamu katakan tidak relevan. menurut data yang saya punya,"
     a "\u201csayang\u201d yang kamu definisikan hanya kondisi biologis yang hanya terjadi di otak manusia."
     hide a_talk
 
     scene bg_ch2_jalan_melayang with dissolve
 
-    centered "wara terkejut dan tidak bisa berkata apa apa. ia tidak percaya asleen mengatakan itu."
-    centered "sepertinya wara lupa bahwa as-leen adalah ai. namun menurutnya as-leen lucu dan sangat imut."
+    centered "Wara terkejut dan tidak bisa berkata apa apa. Ia tidak percaya as-leen mengatakan itu."
+    centered "Sepertinya wara lupa bahwa as-leen adalah ai. Namun menurutnya as-leen lucu dan sangat imut."
 
-    scene bg_ch2_labirin with dissolve
+    scene bg_ch2_labirin_kursi with dissolve
 
     show k_smile at Position(xalign=0.5, yalign=0.3) with dissolve
     k "(tertawa)"
     hide k_smile
 
     show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "hahahahahaha, kau lucu sekali as-leen."
+    k "Hahahahahaha, kau lucu sekali as-leen."
     hide k_talk
 
     show a_nod at Position(xalign=0.5, yalign=0.3) with dissolve
@@ -143,55 +143,55 @@ label chapter2_full:
     scene bg_ch2_jalan_melayang with dissolve
 
     # ── Tanah mulai retak — lari! ─────────────────────────────
-    centered "setelah perbincangan yang begitu romantis, mereka melanjutkan perjalanannya untuk mencari arena bosss yang telah ditunjukkan oleh as-leen."
-    centered "tak butuh waktu lama wara dan as-leen merasakan tanda tanda bos akan muncul."
+    centered "Setelah perbincangan yang begitu romantis, mereka melanjutkan perjalanannya untuk mencari arena boss yang telah ditunjukkan oleh as-leen."
+    centered "Tak butuh waktu lama wara dan as-leen merasakan tanda tanda boss akan muncul."
 
     play sound "audio/sfx/chapter 2/4.suara ground cracking 1.mp3"
-    centered "retakan tanah keluar tak lama setelah mereka berjalan. wara dan as-leen langsung berlari dari reruntuhan yang ingin roboh tersebut."
+    centered "Retakan tanah keluar tak lama setelah mereka berjalan. wara dan as-leen langsung berlari dari reruntuhan yang ingin roboh tersebut."
 
     play music "audio/backsound/Chapter 2/surprising_media-spatial-fantasy-455240.mp3" fadein 1.0
     play sound "audio/sfx/chapter 2/5.suara footstep running.mp3"
 
-    scene bg_ch2_labirin with dissolve
+    scene bg_ch2_labirin_kursi with dissolve
 
     show k_angrytalk at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "as-leen lari!"
+    k "As-leen lari!"
     hide k_angrytalk
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "benar sekali…..ayo kita lari sebelum ini semua ini runtuh"
+    a "Benar sekali…..ayo kita lari sebelum ini semua ini runtuh"
     hide a_talk
 
     scene bg_ch2_jalan_melayang with dissolve
 
     play sound "audio/sfx/chapter 2/5.suara crumbling ruins.mp3"
 
-    centered "mereka berdua pun berlari. meskipun di dunia virtual ini as-leen sebagai ai. ia tetap punya wujud kokoh nya sendiri di dunia ini."
-    centered "rambut as-leen terurai selagi mereka berlari. wara melihat rambuh indah nya dari belakang, sambil menjaga dari retakan yang mengejar mereka."
-    centered "retakan itu terus mengejar mereka berdua. as-leen berada di depan dan dijaga oleh kreswara."
+    centered "Mereka berdua pun berlari. Meskipun di dunia virtual ini as-leen sebagai ai. Ia tetap punya wujud kokoh nya sendiri di dunia ini."
+    centered "Rambut as-leen terurai selagi mereka berlari. Wara melihat rambuh indah nya dari belakang, sambil menjaga dari retakan yang mengejar mereka."
+    centered "Retakan itu terus mengejar mereka berdua. as-leen berada di depan dan dijaga oleh kreswara."
 
-    scene bg_ch2_labirin with dissolve
+    scene bg_ch2_labirin_kursi with dissolve
 
     play sound "audio/sfx/chapter 2/4.suara ground cracking 2.mp3"
 
     show k_angrytalk at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "as-leen…… ke kiri!"
+    k "As-leen…… ke kiri!"
     hide k_angrytalk
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "baik….?"
+    a "Baik…."
     hide a_talk
 
     scene bg_ch2_jalan_melayang with dissolve
 
     play sound "audio/sfx/chapter 2/5.suara debris falling.mp3"
 
-    centered "as-leen pun berpindah ke kiri lalu selamat dari retakan di depan nya. tak berapa lama retakan itu pun berhenti."
-    centered "mereka pun beristirahat dan mengambil napas."
+    centered "As-leen pun berpindah ke kiri lalu selamat dari retakan di depan nya. Tak berapa lama retakan itu pun berhenti."
+    centered "Mereka pun beristirahat dan mengambil napas."
 
     play sound "audio/sfx/chapter 2/5.suara fast breathing 1.mp3"
 
-    centered "wara yang sedang beristirahat melihat lubah retakan tersebut. lalu ia melihat sebuah lapisan khusus di dalam nya."
+    centered "Wara yang sedang beristirahat melihat lubang retakan tersebut. Lalu ia melihat sebuah lapisan khusus di dalam nya."
 
     # ── Menemukan lapisan puzzle di dalam retakan ─────────────
     scene bg_ch2_sebelum_puzzle with dissolve
@@ -199,80 +199,80 @@ label chapter2_full:
 
     show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
     k "(menunjuk lapisan tersebut)"
-    k "as-leen…….liat itu"
+    k "As-leen…….liat itu"
     hide k_talk
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "di dalamnya ada lapisan? untuk apa lapisan itu?"
+    a "Di dalamnya ada lapisan? untuk apa lapisan itu?"
     hide a_talk
 
-    centered "tanpa pikir panjang wara pun langsung loncat dan menembus lapisan tersebut."
-    centered "as-leen tak punya banyak pilihan, ia pun mengikuti kreswara masuk kedalam retakan tersebut."
-    centered "setelah ia masuk kedalam retakan tersebut ia menemukan sebuah puzzle yang harus ia selesaikan."
+    centered "Tanpa pikir panjang wara pun langsung loncat dan menembus lapisan tersebut."
+    centered "As-leen tak punya banyak pilihan, ia pun mengikuti kreswara masuk kedalam retakan tersebut."
+    centered "Setelah ia masuk kedalam retakan tersebut ia menemukan sebuah puzzle yang harus ia selesaikan."
 
     play sound "audio/sfx/chapter 2/7.suara puzzle click.mp3"
 
     show k_smile at Position(xalign=0.5, yalign=0.3) with dissolve
     k "(wajah tengil)"
-    k "yeah, ini cukup mudah"
+    k "Yeah, ini cukup mudah"
     hide k_smile
 
     scene bg_ch2_puzzle with dissolve
 
     play sound "audio/sfx/chapter 2/7.suara ketikan keyboard.wav"
 
-    centered "dengan tangan yang terampil dan ahli kreswara menyelesaikan puzzle tersebut dengan mudah dan tanpa hambatan sama sekali."
-    centered "as-leen terkejut dengan keahlian wara dalam menyelesaikan puzzle tersebut."
+    centered "Dengan tangan yang terampil dan ahli kreswara menyelesaikan puzzle tersebut dengan mudah dan tanpa hambatan sama sekali."
+    centered "As-leen terkejut dengan keahlian wara dalam menyelesaikan puzzle tersebut."
 
     scene bg_ch2_sebelum_puzzle with dissolve
 
     play sound "audio/sfx/chapter 2/9.suara hud activation.mp3"
 
     show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "selesai…..kita bisa melanjutkan perjalanan selanjutnya. ayo, kita masuk as-leen."
+    k "Selesai…..kita bisa melanjutkan perjalanan selanjutnya. Ayo, kita masuk as-leen."
     hide k_talk
 
     show a_nod at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "baiklah"
+    a "Baiklah"
     hide a_nod
 
     # ── Menuju lokasi bos kedua ───────────────────────────────
     scene bg_ch2_sebelum_puzzle with dissolve
     play sound "audio/sfx/chapter 2/2.suara langkah kaki di tanah (2).mp3"
 
-    centered "setelah melewati semua nya. mereka berjalan menuju lokasi bos kedua."
-    centered "tempat itu luas dan juga megah, namun beberapa retakan menyebabkan tempat itu tidak cocok untuk ditinggali makhluk manapun."
+    centered "Setelah melewati semua nya. Mereka berjalan menuju lokasi bos kedua."
+    centered "Tempat itu luas dan juga megah, namun beberapa retakan menyebabkan tempat itu tidak cocok untuk ditinggali makhluk manapun."
 
     play sound "audio/sfx/chapter 2/4.suara ground cracking 3.mp3"
 
     show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "woah……as-leen hati hati. tempat ini sangat ringkih. berhati hatilah"
+    k "Woah……as-leen hati hati. Tempat ini sangat ringkih. berhati hatilah"
     hide k_talk
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
     a "Bawel"
     hide a_talk
 
-    show k_smile at Position(xalign=0.5, yalign=0.3) with dissolve
+    show k_laugh at Position(xalign=0.5, yalign=0.3) with dissolve
     k "Pintar juga ya sekarang ngomong nya, jadi mirip manusia (sambil tertawa)"
-    hide k_smile
+    hide k_laugh
 
     # ── Encounter data roh ────────────────────────────────────
     scene bg_ch2_sebelum_puzzle with dissolve
     play music "audio/backsound/Chapter 2/onetent-samurai-flutes-ethereal-fantasy-flute-relaxing-meditation-music-248255.mp3" fadein 2.0
     play sound "audio/sfx/chapter 2/8.suara ghost static.mp3"
 
-    centered "sebuah data roh muncul di hadapan mereka berdua."
-    centered "kreswara harus mengalahkan data data roh itu, agar data itu bisa as-leen gunakan untuk melawan buto cakil."
+    centered "Sebuah data roh muncul di hadapan mereka berdua."
+    centered "Kreswara harus mengalahkan data-data roh itu, agar data itu bisa as-leen gunakan untuk melawan Dursasana."
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "data-data roh….wara kamu harus mengalahkan mereka."
-    a "agar aku bisa menggunakan data data itu untuk melawan boss berikutnya!"
+    a "Data-data roh….wara kamu harus mengalahkan mereka."
+    a "Agar aku bisa menggunakan data-data itu untuk melawan boss berikutnya!"
     hide a_talk
 
     show k_normal at Position(xalign=0.5, yalign=0.3), napas_berat with dissolve
     k "(mengangguk)"
-    k "baiklah…..akan ku kalahkan mereka semua!"
+    k "Baiklah…..akan ku kalahkan mereka semua!"
     hide k_normal
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
@@ -283,7 +283,7 @@ label chapter2_full:
     scene bg_ch2_pupils_nyala with dissolve
     play sound "audio/sfx/chapter 2/9.suara hud activation.mp3"
 
-    centered "layar kecil di PUPILS milik wara tiba tiba menyala. beberapa tulisan muncul cepat di depannya."
+    centered "Layar kecil di PUPILS milik wara tiba tiba menyala. Beberapa tulisan muncul cepat di depannya."
 
     play sound "audio/sfx/chapter 2/9.suara cyber analysis sound.mp3"
 
@@ -292,7 +292,7 @@ label chapter2_full:
     scene bg_ch2_asleen_error with dissolve
 
     show k_think at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "hah?.....maksudnya apa ini? apakah sistem nya error??"
+    k "Hah?.....maksudnya apa ini? apakah sistem nya error??"
     hide k_think
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
@@ -300,57 +300,57 @@ label chapter2_full:
     hide a_talk
 
     show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "jadi aku harus tau dulu tipe data mereka?"
+    k "Jadi aku harus tau dulu tipe data mereka?"
     hide k_talk
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "iya betul. Jadi, kalau kamu asal menyerang lalu menyerap datanya, mentalmu bisa terganggu."
+    a "Iya betul. Jadi, kalau kamu asal menyerang lalu menyerap datanya, mentalmu bisa terganggu."
     hide a_talk
 
     centered "mendengar itu wara menjadi kebingungan."
 
     show k_think at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "memang kenapa?"
+    k "Memang kenapa?"
     hide k_think
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "karena kamu manusia. otak manusia tidak dibuat untuk menampung terlalu banyak data asing seperti ini."
-    a "kalau data yang rusak dipaksa masuk, pikiranmu bisa kacau sedikit demi sedikit."
+    a "Karena kamu manusia, otak manusia tidak dibuat untuk menampung terlalu banyak data asing seperti ini."
+    a "Kalau data yang rusak dipaksa masuk, pikiranmu bisa kacau sedikit demi sedikit."
     hide a_talk
 
     scene bg_ch2_pupils_nyala with dissolve
 
     play sound "audio/sfx/chapter 2/8.suara Whispering voices.mp3"
 
-    centered "wara terdiam sebentar. belum sempat dia menjawab, suara aneh mulai terdengar samar."
-    centered "di kepalanya seperti bisikan orang menangis dan suara marah yang bercampur jadi satu."
+    centered "Wara terdiam sebentar. Belum sempat dia menjawab, suara aneh mulai terdengar samar."
+    centered "Di kepalanya seperti bisikan orang menangis dan suara marah yang bercampur jadi satu."
 
     scene bg_ch2_asleen_error with dissolve
 
     show k_think at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "ughh……kenapa dengan kepalaku??"
+    k "Ughh……kenapa dengan kepalaku??"
     hide k_think
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "itu efek dari data roh tersebut. kamu harus menjinakkannya dulu sebelum menyerapnya."
+    a "Itu efek dari data roh tersebut. Kamu harus menjinakkannya dulu sebelum menyerapnya."
     hide a_talk
 
     show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "bagaimana cara menjinakannya?"
+    k "Bagaimana cara menjinakannya?"
     hide k_talk
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "perhatikan gerakannya dan pahami emosinya."
-    a "lalu saat datanya mulai stabil, baru kamu bisa menghancurkan wujudnya lalu menyerapnya."
+    a "Perhatikan gerakannya dan pahami emosinya."
+    a "Lalu saat datanya mulai stabil, baru kamu bisa menghancurkan wujudnya lalu menyerapnya."
     hide a_talk
 
     scene bg_ch2_pupils_nyala with dissolve
 
     play sound "audio/sfx/chapter 2/9.suara scanner beep.mp3"
 
-    centered "wara menarik napas pelan lalu mulai fokus melihat roh itu."
+    centered "Wara menarik napas pelan lalu mulai fokus melihat roh itu."
     centered "Gerakannya terlihat tidak karuan, kadang roh itu mundur sendiri, kadang tubuh nya gemetaran, dan glitch di badannya tidak stabil."
-    centered "tapi lama lama wara sadar kalau roh itu sebenarnya terlihat ketakutan."
+    centered "Tapi lama lama wara sadar kalau roh itu sebenarnya terlihat ketakutan."
     centered "Perlahan tulisan di layar PUPILS berubah."
 
     play sound "audio/sfx/chapter 2/7.suara ui beep.mp3"
@@ -360,11 +360,11 @@ label chapter2_full:
     scene bg_ch2_asleen_error with dissolve
 
     show k_think at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "ohhhh, jadi mereka takut?"
+    k "Ohhhh, jadi mereka takut?"
     hide k_think
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "iya betull, jadi kamu jangan lawan dengan emosi."
+    a "Iya betull, jadi kamu jangan lawan dengan emosi."
     a "Jinakan datanya dulu. Jika sudah tenang maka kamu boleh menyerapnya"
     hide a_talk
 
@@ -372,71 +372,71 @@ label chapter2_full:
 
     play sound "audio/sfx/chapter 2/7.suara data processing.mp3"
 
-    centered "wara mulai bergerak pelan. dia tidak langsung menyerang."
-    centered "dia mencoba membaca pola gerakan roh itu sambil menghindari serangannya."
-    centered "semakin lama… cahaya glitch di tubuh roh itu mulai melemah."
-    centered "suara bisikan di kepala wara perlahan hilang."
+    centered "Wara mulai bergerak pelan. Dia tidak langsung menyerang."
+    centered "Dia mencoba membaca pola gerakan roh itu sambil menghindari serangannya."
+    centered "Semakin lama… cahaya glitch di tubuh roh itu mulai melemah."
+    centered "Suara bisikan di kepala wara perlahan hilang."
 
     scene bg_ch2_asleen_error with dissolve
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "bagus wara!! sekarang datanya sudah stabil."
+    a "Bagus wara!! sekarang datanya sudah stabil."
     hide a_talk
 
     scene bg_ch2_pupils_nyala with dissolve
 
-    centered "wara langsung memasang senyum kecil, lalu berlari cepat ke arah roh tersebut."
+    centered "Wara langsung memasang senyum kecil, lalu berlari cepat ke arah roh tersebut."
 
     scene bg_ch2_asleen_error with dissolve
 
     show k_smile at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "sekarang, aku akan selesaikan semua nya"
+    k "Sekarang, aku akan selesaikan semua nya"
     hide k_smile
 
     scene bg_ch2_pupils_nyala with dissolve
 
-    centered "wara meluncurkan serangan tepat ke bagian inti tubuh roh itu."
+    centered "Wara meluncurkan serangan tepat ke bagian inti tubuh roh itu."
 
     play sound "audio/sfx/chapter 2/4.suara stone collapse.mp3"
 
-    centered "tubuh roh tersebut langsung pecah menjadi serpihan cahaya kecil yang beterbangan di udara."
+    centered "Tubuh roh tersebut langsung pecah menjadi serpihan cahaya kecil yang beterbangan di udara."
     centered "PUPILS milik wara langsung mengeluarkan cahaya yang sangat terang lalu menyerap semua serpihan itu."
 
     play sound "audio/sfx/chapter 2/6.suara energy shield pass.mp3"
 
-    centered "wara memegang kepalanya perlahan."
-    centered "sesaat setelah data itu terserap, pikirannya dipenuhi perasaan asing yang bukan miliknya."
-    centered "ada rasa takut, kesepian, dan kebingungan yang muncul tiba tiba sampai membuat dadanya terasa sesak."
-    centered "namun perlahan semua itu mulai mereda, seolah data roh tersebut akhirnya menerima wara tanpa perlawanan lagi."
+    centered "Wara memegang kepalanya perlahan."
+    centered "Sesaat setelah data itu terserap, pikirannya dipenuhi perasaan asing yang bukan miliknya."
+    centered "Ada rasa takut, kesepian, dan kebingungan yang muncul tiba tiba sampai membuat dadanya terasa sesak."
+    centered "Namun perlahan semua itu mulai mereda, seolah data roh tersebut akhirnya menerima wara tanpa perlawanan lagi."
 
     scene bg_ch2_asleen_error with dissolve
 
     show k_think at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "hufft……jadi gini rasanya setelah menyerap data mereka."
+    k "Hufft……jadi gini rasanya setelah menyerap data mereka."
     hide k_think
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "yap, itu yang kamu rasakan tapi kamu berhasil menyerap mereka."
+    a "Yap, itu yang kamu rasakan tapi kamu berhasil menyerap mereka."
     hide a_talk
 
     # ── Pintu biner ───────────────────────────────────────────
     scene bg_ch2_sebelum_puzzle with dissolve
 
-    centered "setelah semua data roh berhasil dikalahkan, jalan di depan mereka perlahan terbuka."
-    centered "di ujung ruangan terlihat sebuah pintu besar yang hampir hancur."
-    centered "seluruh permukaannya dipenuhi tulisan coding dan angka biner yang terus bergerak."
+    centered "Setelah semua data roh berhasil dikalahkan, jalan di depan mereka perlahan terbuka."
+    centered "Di ujung ruangan terlihat sebuah pintu besar yang hampir hancur."
+    centered "Seluruh permukaannya dipenuhi tulisan coding dan angka biner yang terus bergerak."
 
     scene bg_ch2_pintu_biner with dissolve
     play music "audio/backsound/Chapter 2/nastelbom-soundtrack-443631.mp3" fadein 2.0
     play sound "audio/sfx/chapter 2/2.suara buzz listrik.mp3"
 
     show k_think at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "o-oke…….jangan bilang ini puzzle lagi."
+    k "O-oke…….jangan bilang ini puzzle lagi."
     hide k_think
 
-    centered "wara berjalan mendekat sambil memperhatikan pintu itu dengan bingung."
-    centered "angka angka di permukaannya terus berubah cepat tanpa berhenti."
-    centered "sesekali muncul cahaya merah kecil dari sela sela retakan pintu."
+    centered "Wara berjalan mendekat sambil memperhatikan pintu itu dengan bingung."
+    centered "Angka-angka di permukaannya terus berubah cepat tanpa berhenti."
+    centered "Sesekali muncul cahaya merah kecil dari sela sela retakan pintu."
 
     play sound "audio/sfx/chapter 2/7.suara ketikan keyboard.wav"
 
@@ -445,11 +445,11 @@ label chapter2_full:
     hide k_talk
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "sepertinya pintu ini menggunakan sistem data untuk membukanya."
+    a "Sepertinya pintu ini menggunakan sistem data untuk membukanya."
     hide a_talk
 
-    centered "wara menghela nafas pelan lalu mulai memperhatikan susunan angka yang muncul di tengah pintu."
-    centered "awalnya semua terlihat acak, tapi lama lama dia sadar ada beberapa angka yang terus berulang."
+    centered "Wara menghela nafas pelan lalu mulai memperhatikan susunan angka yang muncul di tengah pintu."
+    centered "Awalnya semua terlihat acak, tapi lama lama dia sadar ada beberapa angka yang terus berulang."
 
     # --- PUZZLE PINTU BINER ---
     play sound "audio/sfx/chapter 2/9.suara cyber analysis sound.mp3"
@@ -461,18 +461,18 @@ label chapter2_full:
     centered "01001011"
 
     show k_think at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "hehh?? bentar bentar.."
+    k "Hehh?? bentar bentar.."
     hide k_think
 
-    centered "wara menyipitkan matanya sambil mencoba mengingat sesuatu."
-    centered "beberapa detik kemudian ekspresinya langsung berubah seperti baru sadar."
+    centered "Wara menyipitkan matanya sambil mencoba mengingat sesuatu."
+    centered "Beberapa detik kemudian ekspresinya langsung berubah seperti baru sadar."
 
     show k_smile at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "ohhh sekarang aku tau ini kode apa"
+    k "Ohhh sekarang aku tau ini kode apa"
     hide k_smile
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "kode apa?"
+    a "Kode apa?"
     hide a_talk
 
     show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
@@ -480,7 +480,7 @@ label chapter2_full:
     hide k_talk
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "angka biner? apakah kamu mengerti maksud dari kode nya?"
+    a "Angka biner? apakah kamu mengerti maksud dari kode nya?"
     hide a_talk
 
     show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
@@ -502,8 +502,8 @@ label chapter2_full:
 
     play sound "audio/sfx/chapter 2/1.suara static electronic noise.mp3"
 
-    centered "sesaat setelah wara mengucapkan kata itu, seluruh angka di pintu tiba tiba bergerak lebih cepat."
-    centered "cahaya merahnya berkedip makin terang sebelum akhirnya muncul susunan angka baru."
+    centered "Sesaat setelah wara mengucapkan kata itu, seluruh angka di pintu tiba tiba bergerak lebih cepat."
+    centered "Cahaya merahnya berkedip makin terang sebelum akhirnya muncul susunan angka baru."
 
     play sound "audio/sfx/chapter 2/9.suara cyber analysis sound.mp3"
 
@@ -516,46 +516,46 @@ label chapter2_full:
     k "Kode ini seperti familiar, tapi apa?"
     hide k_think
 
-    centered "wara kembali membaca susunan angka itu perlahan."
+    centered "Wara kembali membaca susunan angka itu perlahan."
     centered "W — A — R — A"
 
     show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
     k "Hah?? ini nama aku, kenapa sistem ini tau nama aku?"
     hide k_angrytalk
 
-    centered "suasana tiba tiba terasa jauh lebih sunyi."
-    centered "wara menatap pintu itu beberapa detik tanpa bicara."
-    centered "rasanya aneh melihat sistem di tempat ini bisa mengenali dirinya."
+    centered "Suasana tiba tiba terasa jauh lebih sunyi."
+    centered "Wara menatap pintu itu beberapa detik tanpa bicara."
+    centered "Rasanya aneh melihat sistem di tempat ini bisa mengenali dirinya."
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "sepertinya pintu ini memang menunggumu."
+    a "Sepertinya pintu ini memang menunggumu."
     hide a_talk
 
-    centered "belum sempat wara menjawab, seluruh angka di pintu langsung berhenti bergerak."
-    centered "lalu perlahan muncul sebuah tulisan besar tepat di tengah pintu."
+    centered "Belum sempat wara menjawab, seluruh angka di pintu langsung berhenti bergerak."
+    centered "Lalu perlahan muncul sebuah tulisan besar tepat di tengah pintu."
     centered "WELCOME, KRESWARA"
 
     # ── Pintu terbuka ─────────────────────────────────────────
     scene bg_ch2_pintu_terbuka with dissolve
     play sound "audio/sfx/chapter 2/6.suara portal whoosh1.mp3"
 
-    centered "cahaya merah di sela sela retakan pintu perlahan berubah jadi biru terang."
-    centered "suara besi bergeser mulai terdengar pelan sebelum akhirnya pintu besar itu terbuka sedikit demi sedikit."
-    centered "udara dingin langsung keluar dari dalam ruangan gelap di baliknya."
-    centered "tepat di tengah ruangan itu ada seseorang sudah berdiri menunggu mereka."
+    centered "Cahaya merah di sela sela retakan pintu perlahan berubah jadi biru terang."
+    centered "Suara besi bergeser mulai terdengar pelan sebelum akhirnya pintu besar itu terbuka sedikit demi sedikit."
+    centered "Udara dingin langsung keluar dari dalam ruangan gelap di baliknya."
+    centered "Tepat di tengah ruangan itu ada seseorang sudah berdiri menunggu mereka."
 
     scene bg_ch2_pintu_biner with dissolve
 
     show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "tenangin diri kamu waraa. Kamu pasti kuat, kamu pasti bisa menyelesaikan ini semua."
+    k "Tenangin diri kamu waraa. Kamu pasti kuat, kamu pasti bisa menyelesaikan ini semua."
     hide k_talk
 
     scene bg_ch2_pintu_terbuka with dissolve
 
-    centered "wara berjalan mendekat lalu mencoba mendorong pintu tersebut."
-    centered "berat sekali sampai tubuhnya ikut gemetar menahannya."
-    centered "melihat itu as-leen pun membantu mendorong pintu tersebut."
-    centered "wara menggertakkan giginya lalu mendorong lebih kuat."
+    centered "Wara berjalan mendekat lalu mencoba mendorong pintu tersebut."
+    centered "Berat sekali sampai tubuhnya ikut gemetar menahannya."
+    centered "Melihat itu as-leen pun membantu mendorong pintu tersebut."
+    centered "Wara menggertakkan giginya lalu mendorong lebih kuat."
 
     scene bg_ch2_pintu_biner with dissolve
 
@@ -569,10 +569,10 @@ label chapter2_full:
 
     play sound "audio/sfx/chapter 2/6.suara portal whoosh2.mp3"
 
-    centered "perlahan pintu besar itu akhirnya terbuka sepenuhnya."
-    centered "suara besi yang bergesekan menggema ke seluruh ruangan."
-    centered "udara dingin langsung menyambut wara dan as-leen dari dalam."
-    centered "wara sempat menarik napas pelan sebelum akhirnya mereka berdua berjalan masuk."
+    centered "Perlahan pintu besar itu akhirnya terbuka sepenuhnya."
+    centered "Suara besi yang bergesekan menggema ke seluruh ruangan."
+    centered "Udara dingin langsung menyambut wara dan as-leen dari dalam."
+    centered "Wara sempat menarik napas pelan sebelum akhirnya mereka berdua berjalan masuk."
 
     # ── Bertemu Dursasana ─────────────────────────────────────
     scene bg_ch2_sebelum_ds with dissolve
@@ -580,15 +580,17 @@ label chapter2_full:
     play sound "audio/sfx/chapter 2/2.suara angin dalam ruangan besar.mp3"
 
     centered "Ruangan di baliknya sangat luas dan gelap."
-    centered "lantainya dipenuhi retakan bercahaya ungu yang bergerak pelan seperti aliran data hidup."
-    centered "beberapa bagian dinding bahkan terlihat hancur dan bergoyang tidak stabil."
+    centered "Lantainya dipenuhi retakan bercahaya ungu yang bergerak pelan seperti aliran data hidup."
+    centered "Beberapa bagian dinding bahkan terlihat hancur dan bergoyang tidak stabil,"
+    centered "seolah tempat itu bisa runtuh kapan saja."
 
-    centered "langkah wara perlahan melambat saat di tengah ruangan mulai terlihat sebuah sosok berdiri membelakangi mereka."
+    centered "Langkah wara perlahan melambat saat di tengah ruangan mulai terlihat sebuah sosok berdiri membelakangi mereka."
     centered "Awalnya hanya bayangan hitam namun, sedikit demi sedikit wujudnya mulai terlihat jelas."
     centered "Tubuhnya tinggi besar dengan armor hitam penuh retakan cahaya ungu yang menyala dari sela sela tubuhnya."
+    centered "Tatapannya tajam lurus ke arah wara seolah sejak awal memang sudah menunggu kedatangan mereka."
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "…Dursasana."
+    a "Dursasana..."
     hide a_talk
 
 label boss_dursasana_start:
@@ -621,7 +623,7 @@ label boss_dursasana_start:
     hide ds_talk
 
     show k_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "dan kau adalah boss kedua nya?"
+    k "Dan kau adalah boss kedua nya?"
     hide k_talk
 
     show ds_talk at Position(xalign=0.5, yalign=0.3) with dissolve
@@ -631,13 +633,16 @@ label boss_dursasana_start:
     hide ds_talk
 
     show k_smile at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "yeahh, itulah alasan mereka menyebutku manusia."
+    k "Yeahh, itulah alasan mereka menyebutku manusia."
     hide k_smile
 
     show ds_talk at Position(xalign=0.5, yalign=0.3) with dissolve
     ds "HAHAHAHA… apakah segampang itu ya mancing emosi manusia?"
-    ds "pantas saja gerakan kau jadi berantakan."
-    ds "Dasar daging bodoh bertulang. kau bahkan tidak pantas berada di dunia ini!"
+    ds "Pantas saja gerakan kau jadi berantakan."
+    ds "Dasar daging bodoh bertulang yang bahkan tanah pun najis memberi sentuhan suci yang dibaluti"
+    ds "nirwana kesucian yang menjadi bernoda menjijikan karena makhluk rendahan yang tak pantas menghirup anugrah kehidupan sepertiku,"
+    ds "dan kau bangga dengan semua itu?!."
+    ds "Kau bahkan tidak pantas berada di dunia ini, kau adalah makhluk hina yang tercipta dari tanah. "
     hide ds_talk
 
     centered "Wara mulai kesal mendengar ucapan itu."
@@ -645,16 +650,16 @@ label boss_dursasana_start:
     scene bg_ch2_sebelum_ds with dissolve
 
     show ds_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    ds "atau mungkin… kau mulai lemah karena terlalu memikirkan AI itu?"
+    ds "Atau mungkin… kau mulai lemah karena terlalu memikirkan AI itu?"
     hide ds_talk
 
     centered "Dursasana melirik ke arah As-leen sambil tersenyum tipis."
-    centered "dan tanpa sadar wara langsung terpancing."
+    centered "Dan tanpa sadar wara langsung terpancing."
 
     scene bg_ch2_lawan_ds with dissolve
 
     k "Tutup mulutmu dan jangan pernah kau membawa-bawa As-leen."
-    k "aku peringatkan kau sekali lagi!"
+    k "Aku peringatkan kau sekali lagi!"
 
     ds "HAHAHAHAHA baru sedikit aku memancing emosimu. dan kau langsung terbawa?"
     ds "Kalau pikiranmu sudah kacau begini, jadi harus darimana aku menyerangmu?"
@@ -665,13 +670,14 @@ label boss_dursasana_start:
 
     centered "Tiba tiba Dursasana langsung menyerang cepat."
     centered "Wara nyaris terkena pukulan itu dan buru buru mundur."
-    centered "pertarungan pun dimulai."
+    centered "Pertarungan pun dimulai."
+    centered "Dursasana terus menyerang sambil terus memancing emosi wara."
 
     scene bg_ch2_sebelum_ds with dissolve
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
     a "Wara, dia melempar data serangan langsung ke pikiranmu!"
-    a "Kamu harus jawab dengan benar—itu satu-satunya cara menyerangnya balik."
+    a "Kamu harus jawab dengan benar, itu satu-satunya cara menyerangnya balik."
     a "Kalau salah, serangannya akan menghantammu lebih keras!"
     hide a_talk
 
@@ -1132,7 +1138,7 @@ label ds_soal_4:
     if fase2_benar >= 1:
         show k_angrytalk at Position(xalign=0.5, yalign=0.3) with dissolve
         k "Aku tidak punya waktu untuk lemah di sini."
-        k "Ini bukan hanya soal kemenangan—ini soal kembalinya wayang bapakku."
+        k "Ini bukan hanya soal kemenangan, ini soal kembalinya wayang bapakku."
         hide k_angrytalk
 
     jump boss_dursasana_fase3
@@ -1303,7 +1309,7 @@ label boss_dursasana_fase3:
     hide ds_talk
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "Wara! Enraged Mode—ini yang paling berbahaya!"
+    a "Wara! Enraged Mode ini yang paling berbahaya!"
     a "Tapi kita sudah sejauh ini. Jangan mundur sekarang!"
     hide a_talk
 
@@ -1497,31 +1503,32 @@ label boss_dursasana_menang:
     play sound "audio/sfx/chapter 2/5.suara fast breathing 2.mp3"
 
     centered "Wara yang sejak tadi memaksakan tubuhnya akhirnya langsung jatuh duduk ke lantai."
-    centered "nafasnya tidak beraturan, tangannya gemetar, dan keringat membasahi wajahnya."
+    centered "Nafasnya tidak beraturan, tangannya gemetar, dan keringat membasahi wajahnya."
 
     show k_think at Position(xalign=0.5, yalign=0.3) with dissolve
-    k "hufttt…kekuatan yang luar biasa…."
+    k "Hufttt…kekuatan yang luar biasa…."
     hide k_think
 
     centered "Tiba tiba As-leen mendekat lalu memegang pundak wara secara perlahan."
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "kemampuan bertarung mu jauh meningkat drastis dibanding sebelumnya…"
-    a "kamu mulai bisa membaca pola lawan dan mengontrol emosimu sendiri."
+    a "Kemampuan bertarung mu jauh meningkat drastis dibanding sebelumnya…"
+    a "Kamu mulai bisa membaca pola lawan dan mengontrol emosimu sendiri."
     hide a_talk
 
-    centered "wara sedikit kaget karena tak biasanya as-leen menyentuhnya secara langsung."
-    centered "meskipun wajahnya masih datar seperti biasa, wara tau kalau sebenarnya dia khawatir."
+    centered "Wara sedikit kaget karena tak biasanya as-leen menyentuhnya secara langsung."
+    centered "Meskipun wajahnya masih datar seperti biasa, wara tau kalau sebenarnya dia khawatir."
 
     show k_smile at Position(xalign=0.5, yalign=0.3) with dissolve
     k "(senyum kecil)"
-    k "terima kasih untuk informasinya. dan terima kasih juga karena sudah mengkhawatirkan aku."
-    k "tak biasanya kau menyentuh secara langsung seperti ini…. terima kasih"
+    k "Terima kasih untuk informasinya dan terima kasih juga karena sudah mengkhawatirkan aku."
+    k "Tak biasanya kau menyentuh secara langsung seperti ini…."
+    K "Terima kasih"
     hide k_smile
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "aku hanya ingin memastikan kamu masih baik baik saja setelah terkena serangan berturut-turut.."
-    a "namun, harus aku akui. kamu terlihat keren saat bertarung."
+    a "Aku hanya ingin memastikan kamu masih baik baik saja setelah terkena serangan berturut-turut.."
+    a "Namun, harus aku akui. kamu terlihat keren saat bertarung."
     hide a_talk
 
     centered "Wara tersenyum kecil lalu memegang lembut tangan as-leen sambil berdiri perlahan."
@@ -1533,14 +1540,14 @@ label boss_dursasana_menang:
     hide k_talk
 
     show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-    a "tenang aja… aku masih baik baik saja. sistemku juga masih normal."
-    a "namun saja…. navigasiku masih sedikit bermasalah sejak tadi."
+    a "Tenang aja… aku masih baik baik saja. sistemku juga masih normal."
+    a "Namun saja…. navigasiku masih sedikit bermasalah sejak tadi."
     hide a_talk
 
     play sound "audio/sfx/chapter 2/10.suara distant echo voice.mp3"
 
-    centered "wara mengangguk pelan sambil menatap as-leen beberapa detik lebih lama dari biasanya."
-    centered "dan untuk pertama kalinya Wara mulai sadar kalau as-leen bukan cuma sekedar ai yang menemaninya di perjalanan ini."
+    centered "Wara mengangguk pelan sambil menatap as-leen beberapa detik lebih lama dari biasanya."
+    centered "Dan untuk pertama kalinya Wara mulai sadar kalau as-leen bukan cuma sekedar ai yang menemaninya di perjalanan ini."
 
     play sound "audio/sfx/chapter 2/7.suara ui beep.mp3"
     centered "── DATA ROH DURSASANA TERSIMPAN ──"
