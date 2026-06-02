@@ -410,7 +410,7 @@ label boss_sengkuni_start:
     play music "audio/backsound/Chapter 3/entrence_boss_cut.mp3" fadein 0.5 fadeout 0.5
 
     $ _skipping = False
-    show screen radar_roh_screen(level=3)
+    show screen radar_roh_screen(level=2)
     $ renpy.pause(2.0, hard=True)
     $ _skipping = True
 
@@ -753,7 +753,7 @@ label boss_sengkuni_fase2:
 
     play sound "audio/backsound/Chapter 3/liecio-noise-machine-190205.mp3"
     show effect_3 at truecenter with dissolve
-    $ renpy.pause(3.0, hard=True)
+    $ renpy.pause(1.0, hard=True)
     scene bg_c3_sengkuni_hantam with dissolve
 
     nr "Dalam sekejap Sengkuni muncul lagi di belakang Wara sambil tertawa kecil."
@@ -1099,7 +1099,7 @@ label boss_sengkuni_fase3:
     $ _skipping = False
     play sound "audio/backsound/Chapter 3/liecio-noise-machine-190205.mp3"
     show effect_3 at truecenter with dissolve
-    $ renpy.pause(3.0, hard=True)
+    $ renpy.pause(1.0, hard=True)
     $ _skipping = True
 
     $ _skipping = False
@@ -1126,7 +1126,7 @@ label boss_sengkuni_fase3:
     
     play sound "audio/backsound/Chapter 3/liecio-noise-machine-190205.mp3"
     show effect_3 at truecenter with dissolve
-    $ renpy.pause(3.0, hard=True)
+    $ renpy.pause(1.0, hard=True)
     scene bg_c3_wara_serang with dissolve
 
     sk "Hahh??!"
@@ -1196,7 +1196,7 @@ label c3_soal_5:
             hide k_angrytalk
             play sound "audio/backsound/Chapter 3/Sword, stone-yoyosound.com.mp3"
             show sk_talk at Position(xalign=0.5, yalign=0.2), getar with dissolve
-            sk "GRAAAHHHH— Tidak mungkin... tidak... MUNGKIN!"
+            sk "GRAAAHHHH— Tidak MUNGKIN!"
             hide sk_talk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
             a "Tepat! Satu pukulan lagi, Wara. Akhiri dia sekarang!"
@@ -1464,7 +1464,7 @@ label boss_sengkuni_menang:
 
     play sound "audio/backsound/Chapter 3/liecio-noise-machine-190205.mp3"
     show effect_3 at truecenter with dissolve
-    $ renpy.pause(3.0, hard=True)
+    $ renpy.pause(1.0, hard=True)
     scene bg_c3_sengkuni_kalah with dissolve
 
     play sound "audio/backsound/Chapter 3/nastelbom-intense-453507.mp3" fadein 0.5
