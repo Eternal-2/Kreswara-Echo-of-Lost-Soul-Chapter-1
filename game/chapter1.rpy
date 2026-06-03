@@ -22,7 +22,7 @@ label chapter1_full:
     
     stop sound
 
-    scene bg_ruangan_malam with dissolve
+    scene bg_ruangan_malamm with dissolve
     play music "audio/backsound/Chapter 1/Chapter 1 Scene rumah kreswara saat malam hari.mp3" fadein 1.5
     play sound "audio/sfx/chapter 1/2.suara ambience rumah malam.mp3" loop
 
@@ -84,7 +84,7 @@ label pilihan_marah:
 
 label scene_kamar:
     stop sound
-    scene bg_ruangan_malam with fade
+    scene bg_ruangan_malamm with fade
     play music "audio/backsound/Chapter 1/Memperlihatkan_Laptop_Kreswara.mp3" fadein 1.5
     play sound "audio/sfx/chapter 1/1.suara langkah kaki di tanah.mp3"
     show k_smile at Position(xalign=0.5, yalign=0.3) with dissolve
@@ -266,8 +266,11 @@ label scene_kamar:
     k "Oke... kita lihat isi dalemnya."
     hide k_talk
 
+    scene bg_laptop with fade 
+
     nr "Folder dibuka satu-satu. Ada yang biasa, ada yang aneh. Sampai satu file bikin Kreswara berhenti."
 
+    scene bg_ruangan_malam with fade
     show k_think at Position(xalign=0.5, yalign=0.3) with dissolve
     k "'darul_baka.exe'?"
     hide k_think
@@ -281,6 +284,8 @@ label scene_kamar:
     nr "..."
     nr "Tidak terjadi apa-apa."
     nr "Tiba-tiba...."
+
+    scene bg_ruangan_malam with fade
 
     scene black
 
