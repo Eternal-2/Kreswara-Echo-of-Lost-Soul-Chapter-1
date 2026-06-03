@@ -74,6 +74,8 @@ image bg_desa_siang       = im.Scale("images/BG/BG chapter 1/rumah kreswara keti
 image bg_desa_malam       = im.Scale("images/BG/BG chapter 1/rumah kreswara malam.png", 1920, 1080)        
 image bg_ruangan_siang    = im.Scale("images/BG/BG chapter 1/DALAM RUMAH KRESWARA  (SIANG).png", 1920, 1080) 
 image bg_ruangan_malam    = im.Scale("images/BG/BG chapter 1/DALAM RUMAH KRESWARA (MALAM).png", 1920, 1080)
+image bg_ruangan_malamm   = im.Scale("images/BG/BG chapter 1/malamm.png", 1920, 1080)
+image bg_laptop           = im.Scale("images/BG/BG chapter 1/file laptop wara.png", 1920, 1080)
 image bg_cod              = im.Scale("images/BG/BG chapter 1/Kreswara menuju pulang ke rumah .png", 1920, 1080)
 image bg_nyimping         = im.Scale("images/BG/BG chapter 1/Kreswara Nyimping Wayang.png", 1920, 1080)     
 image bg_panggung         = im.Scale("images/BG/BG chapter 1/panggung wayang .png", 1920, 1080) 
@@ -144,7 +146,7 @@ image bg_istana_duryodana = im.Scale("images/BG/BG Chapter 4/tanah hancur.png", 
 image bg_menang_dur       = im.Scale("images/BG/BG Chapter 4/wara mengalahkan duryodana.png", 1920, 1080)
 image bg_langit_jingga_virtual = im.Scale("images/BG/BG Chapter 4/langit senja setelah kemenangan melawan duryodana .png", 1920, 1080)
 image bg_langit_jingga_pisah = im.Scale("images/BG/BG Chapter 4/perpisahan wara dengan as-leen .png", 1920, 1080)
-image bg_perpisahan       = im.Scale("images/BG/BG Chapter 4/asleen meluk wara .png", 1920, 1080)
+image bg_peluk       = im.Scale("images/BG/BG Chapter 4/asleen meluk wara .png", 1920, 1080)
 
 # Ending
 image rumah_sakit_good         =  im.Scale("images/BG/Ending/GOOD ENDING .png", 1920, 1080)

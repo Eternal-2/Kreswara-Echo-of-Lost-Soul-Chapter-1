@@ -503,26 +503,26 @@ label soal_ch4_1:
 label cadangan_ch4_1:
     show screen soal_panel(
         nomor="1C",
-        tema="Python – String Method",
-        kode="teks = 'Digital Wayang Kreswara'\nkata = teks.split()\nprint(len(kata))\nprint(kata[2].upper())",
-        pertanyaan="Apa output dari kode di atas?"
+        tema="Python – Kondisional",
+        kode="nilai = 50\nif nilai >= 60:\n    print('Lulus')\nelse:\n    print('Tidak Lulus')",
+        pertanyaan="Apa output dari program tersebut?"
     )
 
     menu:
-        "2 dan DIGITAL":
+        "Lulus":
             hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "2?! split() memecah PER SPASI—ada 3 kata di sana!"
+            k "50 >= 60 itu FALSE! Blok if tidak dijalankan, yang jalan blok else!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "'Digital Wayang Kreswara' punya 3 kata. Dan kata[2] itu yang KETIGA, bukan pertama!"
+            a "50 tidak memenuhi >= 60, jadi else yang dieksekusi!"
             hide a_talk
             jump cadangan_ch4_1
 
-        "3 dan KRESWARA":
+        "Tidak Lulus":
             hide screen soal_panel
             $ fase1_benar += 1
             $ quiz_score  += 1
@@ -530,36 +530,36 @@ label cadangan_ch4_1:
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), getar with dissolve
-            k "3 kata! kata[2] = 'Kreswara', .upper() = 'KRESWARA'!"
+            k "Tidak Lulus! Nilai 50 tidak memenuhi >= 60, jadi blok else yang jalan!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "Tepat! Indeks dimulai dari 0, jadi kata[2] adalah elemen ketiga. Lanjut!"
+            a "Tepat! Kondisi False → else dieksekusi. Lanjut!"
             hide a_talk
             jump soal_ch4_2
 
-        "3 dan DIGITAL":
+        "Lulus dan Tidak Lulus (dua baris)":
             hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "Jumlah katanya benar 3, tapi kata[2] bukan kata PERTAMA!"
+            k "if-else hanya menjalankan SATU blok—tidak bisa keduanya sekaligus!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "Indeks list mulai dari 0: kata[0]='Digital', kata[1]='Wayang', kata[2]='Kreswara'!"
+            a "if-else = salah satu, bukan dua-duanya!"
             hide a_talk
             jump cadangan_ch4_1
 
-        "3 dan Kreswara":
+        "Program tidak menghasilkan output":
             hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "Jumlah benar, kata yang benar, tapi .upper() harus KAPITAL SEMUA!"
+            k "Ada else di sana! Kalau if-nya False, else pasti dijalankan!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a ".upper() mengubah SEMUA huruf menjadi kapital, bukan hanya huruf pertama!"
+            a "else selalu dijalankan kalau kondisi if tidak terpenuhi!"
             hide a_talk
             jump cadangan_ch4_1
 
@@ -634,26 +634,26 @@ label soal_ch4_2:
 label cadangan_ch4_2:
     show screen soal_panel(
         nomor="2C",
-        tema="Sejarah – Pasca-Reformasi",
+        tema="Sejarah – Orde Baru",
         kode="",
-        pertanyaan="Penghapusan Dwifungsi ABRI pada era Reformasi\nberarti militer..."
+        pertanyaan="Salah satu dampak positif dari program Repelita\npada masa Orde Baru adalah..."
     )
 
     menu:
-        "Dibubarkan dan digantikan oleh polisi nasional":
+        "Kebebasan pers yang semakin luas":
             hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "Dibubarkan?! Militer tidak dibubarkan—hanya perannya yang dipangkas!"
+            k "Kebebasan pers?! Orde Baru justru MEMBATASI kebebasan pers!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "TNI masih ada, tapi tidak lagi bisa duduk di DPR atau jabatan sipil!"
+            a "Orde Baru dikenal represif terhadap pers. Itu bukan dampak positif Repelita!"
             hide a_talk
             jump cadangan_ch4_2
 
-        "Tidak lagi menjalankan peran sosial-politik dan fokus pada fungsi pertahanan":
+        "Tercapainya swasembada beras pada tahun 1984":
             hide screen soal_panel
             $ fase1_benar += 1
             $ quiz_score  += 1
@@ -661,36 +661,36 @@ label cadangan_ch4_2:
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), getar with dissolve
-            k "Benar! Dwifungsi ABRI dihapus militer kembali ke fungsi pertahanan saja!"
+            k "Swasembada beras 1984! Indonesia bahkan dapat penghargaan FAO atas keberhasilan ini!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "Tepat! Militer tidak lagi boleh masuk ranah politik sejak era Reformasi. Lanjut!"
+            a "Tepat! Repelita berhasil wujudkan swasembada beras—pencapaian besar Orde Baru. Lanjut!"
             hide a_talk
             jump soal_ch4_3
 
-        "Anggota TNI diperbolehkan mendirikan partai politik sendiri":
+        "Penghapusan kesenjangan ekonomi antara kota dan desa":
             hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "Justru sebaliknya! Penghapusan Dwifungsi berarti militer KELUAR dari politik!"
+            k "Kesenjangan justru masih jadi masalah besar di era Orde Baru!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "Reformasi memisahkan militer dari ranah sipil-politik, bukan memberinya lebih banyak peran!"
+            a "Kesenjangan kota-desa tidak berhasil dihapus. Fokus ke capaian pertaniannya!"
             hide a_talk
             jump cadangan_ch4_2
 
-        "Jabatan presiden tidak lagi bisa dijabat perwira militer aktif":
+        "Terbukanya sistem multipartai yang bebas":
             hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "Itu bukan inti dari penghapusan Dwifungsi ABRI!"
+            k "Multipartai bebas?! Orde Baru justru memaksa fusi partai menjadi hanya 3!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "Inti Dwifungsi adalah peran ganda militer di DPR/MPR dan jabatan sipil, bukan soal presiden!"
+            a "Orde Baru membatasi partai, bukan membuka multipartai. Coba lagi!"
             hide a_talk
             jump cadangan_ch4_2
 
@@ -802,26 +802,39 @@ label boss_duryodana_fase2:
 label cadangan_ch4_3:
     show screen soal_panel(
         nomor="3C",
-        tema="Python – Fungsi & Kondisional",
-        kode="def hitung(a, b):\n    return a + b\n\nhasil = hitung(10, 7)\nprint(hasil)",
-        pertanyaan="Apa output dari kode di atas?"
+        tema="Python – Fungsi",
+        kode="",
+        pertanyaan="Diketahui output program adalah: 17\nManakah fungsi yang menghasilkan output\ntersebut saat dipanggil dengan hitung(10, 7)?"
     )
 
     menu:
-        "3":
+        "def hitung(a, b): return a * b":
             hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "3?! return a + b itu PENJUMLAHAN, bukan pengurangan!"
+            k "a * b?! 10 × 7 = 70, bukan 17!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "Operator + berarti tambah. 10 + 7 = 17, bukan 10 - 7 = 3!"
+            a "Perkalian menghasilkan 70. Yang menghasilkan 17 adalah penjumlahan!"
             hide a_talk
             jump cadangan_ch4_3
 
-        "17":
+        "def hitung(a, b): return a - b":
+            hide screen soal_panel
+            show screen feedback_screen("salah")
+            pause 1.6
+            hide screen feedback_screen
+            show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
+            k "a - b?! 10 − 7 = 3, bukan 17!"
+            hide k_angrytalk
+            show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
+            a "Pengurangan menghasilkan 3. Cari operator yang hasilnya 17!"
+            hide a_talk
+            jump cadangan_ch4_3
+
+        "def hitung(a, b): return a + b":
             hide screen soal_panel
             $ fase1_benar += 1
             $ quiz_score  += 1
@@ -829,36 +842,23 @@ label cadangan_ch4_3:
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), getar with dissolve
-            k "17! hitung(10, 7) = 10 + 7 = 17. Fungsi return bekerja sempurna!"
+            k "a + b! 10 + 7 = 17. Fungsi return penjumlahan—tepat!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "Tepat! Fungsi mengembalikan nilai hasil penjumlahan. Lanjut ke soal berikutnya!"
+            a "Tepat! hitung(10, 7) = 10 + 7 = 17. Lanjut!"
             hide a_talk
             jump soal_ch4_4
 
-        "70":
+        "def hitung(a, b): return a // b":
             hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "70?! Itu hasil perkalian 10 × 7, bukan penjumlahan!"
+            k "a // b adalah pembagian bulat! 10 // 7 = 1, bukan 17!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "Operatornya + (plus), bukan * (kali). 10 + 7 = 17!"
-            hide a_talk
-            jump cadangan_ch4_3
-
-        "None":
-            hide screen soal_panel
-            show screen feedback_screen("salah")
-            pause 1.6
-            hide screen feedback_screen
-            show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "None muncul kalau fungsinya tidak ada return! Ini ada return a + b!"
-            hide k_angrytalk
-            show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "Fungsi yang tidak punya return memang menghasilkan None, tapi ini ada return!"
+            a "// = floor division. 10 // 7 = 1. Yang menghasilkan 17 adalah penjumlahan!"
             hide a_talk
             jump cadangan_ch4_3
 
@@ -933,26 +933,26 @@ label soal_ch4_4:
 label cadangan_ch4_4:
     show screen soal_panel(
         nomor="4C",
-        tema="Sejarah – Pasca-Reformasi",
+        tema="Sejarah – Orde Baru",
         kode="",
-        pertanyaan="Amandemen UUD 1945 (1999–2002) membatasi\nmasa jabatan presiden menjadi maksimal..."
+        pertanyaan="Program KB (Keluarga Berencana) yang gencar\ndijalankan Orde Baru bertujuan untuk..."
     )
 
     menu:
-        "1 periode (5 tahun)":
+        "Meningkatkan jumlah penduduk agar tenaga kerja melimpah":
             hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "1 periode saja?! Terlalu singkat—konstitusi memberi kesempatan dua kali!"
+            k "Meningkatkan penduduk?! KB justru dibuat untuk MENEKAN pertumbuhannya!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "UUD hasil amandemen memberi hak presiden maksimal 2 periode, masing-masing 5 tahun!"
+            a "KB = Keluarga Berencana. Tujuannya mengendalikan pertumbuhan penduduk, bukan menambah!"
             hide a_talk
             jump cadangan_ch4_4
 
-        "2 periode (masing-masing 5 tahun)":
+        "Mengendalikan laju pertumbuhan penduduk yang dinilai terlalu cepat":
             hide screen soal_panel
             $ fase2_benar += 1
             $ quiz_score  += 1
@@ -960,36 +960,36 @@ label cadangan_ch4_4:
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), getar with dissolve
-            k "2 PERIODE, masing-masing 5 tahun! Tidak ada lagi presiden seumur hidup!"
+            k "Benar! Slogan 'Dua Anak Cukup'—KB untuk kendalikan laju pertumbuhan penduduk!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "Tepat! Pembatasan ini adalah jantung dari amandemen mencegah kekuasaan tanpa batas. Lanjut!"
+            a "Tepat! Program KB berhasil turunkan angka kelahiran secara signifikan. Lanjut!"
             hide a_talk
             jump soal_ch4_5
 
-        "3 periode (masing-masing 5 tahun)":
+        "Memindahkan penduduk dari Jawa ke luar Jawa melalui transmigrasi":
             hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "3 periode?! Reformasi justru ingin memperketat batas kekuasaan!"
+            k "Transmigrasi itu program BERBEDA! KB bukan tentang pindah lokasi penduduk!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "Konstitusi menetapkan maksimal 2 periode saja, bukan 3!"
+            a "Transmigrasi dan KB adalah dua program berbeda. KB fokus pada pengendalian kelahiran!"
             hide a_talk
             jump cadangan_ch4_4
 
-        "Tidak ada batasan periode":
+        "Meningkatkan angka kelahiran di daerah terpencil":
             hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "Tidak ada batasan?! Itu sistem LAMA yang ingin diubah oleh Reformasi!"
+            k "Justru sebaliknya! KB dibuat untuk MENURUNKAN angka kelahiran!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "Amandemen justru dibuat UNTUK membatasi masa jabatan! Tidak ada batasan itu pra-reformasi!"
+            a "KB = mengendalikan kelahiran agar tidak terlalu cepat, bukan meningkatkannya!"
             hide a_talk
             jump cadangan_ch4_4
 
@@ -1105,26 +1105,13 @@ label boss_duryodana_fase3:
 label cadangan_ch4_5:
     show screen soal_panel(
         nomor="5C",
-        tema="Python – Fungsi & List",
-        kode="nilai = [60, 80, 90, 50, 70]\nhasil = [n for n in nilai if n > 70]\nprint(sum(hasil))\nprint(len(hasil))",
-        pertanyaan="Apa output dari kode di atas?"
+        tema="Python – Perulangan",
+        kode="for i in range(1, 5):\n    print(i, end=' ')",
+        pertanyaan="Apa output dari program tersebut?"
     )
 
     menu:
-        "240 dan 3":
-            hide screen soal_panel
-            show screen feedback_screen("salah")
-            pause 1.6
-            hide screen feedback_screen
-            show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "240?! Perhatikan operatornya—ini n > 70, BUKAN n >= 70!"
-            hide k_angrytalk
-            show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "n > 70 artinya 70 TIDAK masuk! Hanya [80, 90] yang lolos filter!"
-            hide a_talk
-            jump cadangan_ch4_5
-
-        "170 dan 2":
+        "1 2 3 4":
             hide screen soal_panel
             $ fase2_benar += 1
             $ quiz_score  += 1
@@ -1132,36 +1119,49 @@ label cadangan_ch4_5:
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), getar with dissolve
-            k "170 dan 2! n > 70 → hanya [80, 90]. sum=170, len=2. Operator > vs >= itu beda!"
+            k "1 2 3 4! range(1,5) mulai dari 1 sampai 4—angka 5 tidak termasuk!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "Tepat! > (lebih dari) tidak memasukkan 70 sendiri. Lanjut ke fase final!"
+            a "Tepat! end=' ' cetak dalam satu baris. Lanjut ke fase final!"
             hide a_talk
             jump soal_ch4_6
 
-        "350 dan 5":
+        "1 2 3 4 5":
             hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "350?! Kamu mengambil semua elemen tanpa filter sama sekali!"
+            k "5 tidak masuk! range(1, 5) berhenti SEBELUM angka 5!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "Ada filter n > 70! 60, 50, dan 70 tidak lolos. Hanya [80, 90]!"
+            a "range(start, stop)—angka stop tidak ikut! range(1,5) = 1,2,3,4 saja!"
             hide a_talk
             jump cadangan_ch4_5
 
-        "170 dan 3":
+        "0 1 2 3":
             hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "Sumnya benar 170, tapi lennya salah! n > 70 tidak memasukkan 70!"
+            k "0?! range(1, 5) mulai dari 1, bukan 0!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "n > 70 → [80, 90] saja, len = 2 bukan 3. 70 tidak lolos karena operator >!"
+            a "range(0, 5) yang mulai dari 0. Ini range(1, 5)—mulai dari 1!"
+            hide a_talk
+            jump cadangan_ch4_5
+
+        "1 2 3":
+            hide screen soal_panel
+            show screen feedback_screen("salah")
+            pause 1.6
+            hide screen feedback_screen
+            show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
+            k "Kurang satu! range(1, 5) menghasilkan 1 sampai 4—ada 4 angka, bukan 3!"
+            hide k_angrytalk
+            show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
+            a "range(1,5) = [1, 2, 3, 4]. Angka 4 tetap masuk karena stop-nya adalah 5!"
             hide a_talk
             jump cadangan_ch4_5
 
@@ -1241,27 +1241,41 @@ label cadangan_ch4_6:
     show screen timer_screen(length=25.0, on_timeout="waktu_habis_boss_dur")
     show screen soal_panel(
         nomor="6C",
-        tema="Python – String & List",
-        kode="kalimat = 'Wayang Kulit Jawa'\nkata = kalimat.split()\nprint(len(kata))\nprint(kata[1].upper())",
-        pertanyaan="Apa output dari kode di atas?"
+        tema="Python – List",
+        kode="buah = ['apel', 'mangga', 'pisang']\nbuah.__________('jeruk')\nprint(len(buah))",
+        pertanyaan="Isi __________ agar program mencetak 4."
     )
 
     menu:
-        "2 dan WAYANG":
+        "add":
             hide screen timer_screen
             hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "2?! Ada 3 kata di kalimat itu! Dan kata[1] bukan kata pertama!"
+            k "add tidak ada di Python! Method untuk list berbeda dengan set!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "'Wayang Kulit Jawa' = 3 kata. kata[1] = 'Kulit' (indeks mulai 0). Coba soal serupa!"
+            a "Python list tidak punya .add()—itu milik set! Coba soal serupa!"
             hide a_talk
             jump cadangan_ch4_6b
 
-        "3 dan KULIT":
+        "insert":
+            hide screen timer_screen
+            hide screen soal_panel
+            show screen feedback_screen("salah")
+            pause 1.6
+            hide screen feedback_screen
+            show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
+            k "insert butuh DUA argumen: indeks dan nilai! buah.insert('jeruk') tidak cukup!"
+            hide k_angrytalk
+            show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
+            a ".insert(index, value) butuh posisi juga. Yang tambah di akhir langsung pakai .append()!"
+            hide a_talk
+            jump cadangan_ch4_6b
+
+        "append":
             hide screen timer_screen
             hide screen soal_panel
             $ fase3_benar += 1
@@ -1270,38 +1284,24 @@ label cadangan_ch4_6:
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), getar with dissolve
-            k "3 KATA dan KULIT! split() → 3 elemen, kata[1]='Kulit', .upper()='KULIT'!"
+            k "append! Tambahkan 'jeruk' ke akhir list—jadi 4 elemen. Tepat!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "Tepat! Sekarang soal terakhir—kerahkan semua kekuatanmu, Wara!"
+            a "Tepat! .append() menambah elemen ke akhir list. Sekarang soal terakhir!"
             hide a_talk
             jump soal_ch4_7
 
-        "3 dan WAYANG":
+        "push":
             hide screen timer_screen
             hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "Jumlah katanya benar 3, tapi kata[1] bukan kata pertama!"
+            k "push tidak ada di Python! Itu bahasa pemrograman lain seperti JavaScript!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "Indeks mulai dari 0: kata[0]='Wayang', kata[1]='Kulit', kata[2]='Jawa'! Coba lagi!"
-            hide a_talk
-            jump cadangan_ch4_6b
-
-        "3 dan Kulit":
-            hide screen timer_screen
-            hide screen soal_panel
-            show screen feedback_screen("salah")
-            pause 1.6
-            hide screen feedback_screen
-            show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "Kata yang dipilih benar, tapi .upper() harus KAPITAL SEMUA!"
-            hide k_angrytalk
-            show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a ".upper() → KULIT (semua kapital), bukan Kulit (hanya huruf pertama)! Coba lagi!"
+            a "Python tidak punya .push()! Yang benar untuk tambah di akhir list adalah .append()!"
             hide a_talk
             jump cadangan_ch4_6b
 
@@ -1309,27 +1309,27 @@ label cadangan_ch4_6b:
     show screen timer_screen(length=25.0, on_timeout="waktu_habis_boss_dur")
     show screen soal_panel(
         nomor="6C-2",
-        tema="Sejarah – Pasca-Reformasi",
+        tema="Sejarah – Reformasi",
         kode="",
-        pertanyaan="Pemilihan umum presiden secara langsung\noleh rakyat Indonesia pertama kali\ndilaksanakan pada tahun..."
+        pertanyaan="Penghapusan Dwifungsi ABRI pada era Reformasi\nberarti..."
     )
 
     menu:
-        "1999":
+        "Tentara dibubarkan dan digantikan oleh polisi nasional":
             hide screen timer_screen
             hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "1999 ada pemilu legislatif, tapi presiden masih dipilih oleh MPR!"
+            k "Dibubarkan?! TNI tetap ada—hanya peran gandanya yang dihapus!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "Pemilu langsung presiden baru dilaksanakan setelah amandemen UUD selesai!"
+            a "TNI masih ada sampai sekarang. Yang dihapus adalah peran sosial-politiknya!"
             hide a_talk
             jump cadangan_ch4_6b
 
-        "2004":
+        "Militer tidak lagi menjalankan peran sosial-politik dan fokus pada fungsi pertahanan":
             hide screen timer_screen
             hide screen soal_panel
             $ fase3_benar += 1
@@ -1338,38 +1338,38 @@ label cadangan_ch4_6b:
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), getar with dissolve
-            k "2004! SBY terpilih dalam pemilu langsung pertama buah nyata Reformasi!"
+            k "Benar! Dwifungsi ABRI dihapus—militer fokus pertahanan, tidak masuk ranah politik lagi!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "Tepat! Amandemen UUD 1945 memungkinkan rakyat memilih langsung. Lanjut soal terakhir!"
+            a "Tepat! Militer keluar dari DPR/MPR dan jabatan sipil sejak Reformasi. Lanjut!"
             hide a_talk
             jump soal_ch4_7
 
-        "2001":
+        "Anggota TNI diperbolehkan mendirikan partai politik sendiri":
             hide screen timer_screen
             hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "2001?! Itu tahun Megawati menggantikan Gus Dur lewat Sidang Istimewa MPR!"
+            k "Justru sebaliknya! Reformasi membuat militer KELUAR dari politik, bukan masuk lebih dalam!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "Pergantian presiden 2001 bukan lewat pemilu langsung. Pemilu langsung baru di 2004!"
+            a "Penghapusan Dwifungsi = militer tidak boleh berpolitik praktis. Coba lagi!"
             hide a_talk
             jump cadangan_ch4_6b
 
-        "2009":
+        "Jabatan presiden tidak lagi bisa dijabat perwira militer aktif":
             hide screen timer_screen
             hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "2009 pemilu langsung yang KEDUA! Yang pertama sudah lebih dulu, 5 tahun sebelumnya!"
+            k "Itu bukan inti Dwifungsi ABRI! Inti Dwifungsi adalah peran di DPR/MPR dan jabatan sipil!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "SBY pertama kali terpilih di 2004, bukan 2009. Itu periode keduanya!"
+            a "Dwifungsi ABRI = peran ganda militer di fungsi pertahanan DAN sosial-politik. Coba lagi!"
             hide a_talk
             jump cadangan_ch4_6b
 
@@ -1445,26 +1445,26 @@ label cadangan_ch4_7:
     show screen soal_panel(
         nomor="7C",
         tema="Python – Fungsi & List",
-        kode="nilai = [60, 80, 90, 50, 70]\nhasil = [n for n in nilai if n >= 80]\nprint(sum(hasil))\nprint(len(hasil))",
-        pertanyaan="Apa output dari kode di atas?"
+        kode="def total(data):\n    return sum(data)\n\nangka = [10, 20, 30, 40]\nprint(total(angka))\nprint(len(angka))",
+        pertanyaan="Apa output dari program tersebut?"
     )
 
     menu:
-        "240 dan 3":
+        "100 dan 3":
             hide screen timer_screen
             hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "240?! Filternya n >= 80—70 tidak masuk karena 70 < 80!"
+            k "Sum-nya benar 100, tapi len-nya salah! Hitung lagi elemennya!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "n >= 80 → hanya [80, 90]. sum=170, len=2. Beda tipis dengan >= 70! Coba soal serupa!"
+            a "[10, 20, 30, 40] punya 4 elemen, bukan 3! Coba soal serupa!"
             hide a_talk
             jump cadangan_ch4_7b
 
-        "170 dan 2":
+        "100 dan 4":
             hide screen timer_screen
             hide screen soal_panel
             $ fase3_benar += 1
@@ -1473,7 +1473,7 @@ label cadangan_ch4_7:
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), getar with dissolve
-            k "170 dan 2! n >= 80 → [80, 90]. sum=170, len=2. HABISI DIA SEKARANG!"
+            k "100 dan 4! sum([10,20,30,40])=100, len=4. Fungsi total() bekerja sempurna!"
             hide k_angrytalk
             play sound "audio/sfx/chapter 4/monster.mp3"
             show dur_talk at Position(xalign=0.5, yalign=0.3), getar with dissolve
@@ -1484,31 +1484,31 @@ label cadangan_ch4_7:
             hide a_talk
             jump boss_duryodana_menang
 
-        "350 dan 5":
+        "40 dan 4":
             hide screen timer_screen
             hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "350?! Kamu mengambil semua tanpa filter! Ada kondisi n >= 80!"
+            k "40?! sum() menjumlahkan SEMUA elemen, bukan mengambil elemen terakhir!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "Hanya nilai >= 80 yang masuk ke hasil! 60, 50, dan 70 tidak lolos! Coba soal serupa!"
+            a "sum([10,20,30,40]) = 10+20+30+40 = 100, bukan 40! Coba soal serupa!"
             hide a_talk
             jump cadangan_ch4_7b
 
-        "170 dan 3":
+        "10 dan 4":
             hide screen timer_screen
             hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "Sum benar 170 tapi len salah! n >= 80 → hanya [80, 90], bukan tiga elemen!"
+            k "10?! sum() menjumlahkan semua, bukan mengambil elemen pertama!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "70 tidak memenuhi >= 80! Jadi hanya 2 elemen yang masuk, bukan 3! Coba soal serupa!"
+            a "sum() = total semua elemen dijumlah! 10+20+30+40=100. Coba soal serupa!"
             hide a_talk
             jump cadangan_ch4_7b
 
@@ -1516,27 +1516,27 @@ label cadangan_ch4_7b:
     show screen timer_screen(length=25.0, on_timeout="waktu_habis_boss_dur")
     show screen soal_panel(
         nomor="7C-2",
-        tema="Sejarah – Pasca-Reformasi",
-        kode="",
-        pertanyaan="Komisi Pemberantasan Korupsi (KPK) dibentuk\npada era Pasca-Reformasi berdasarkan..."
+        tema="Python – Perulangan & Kondisional",
+        kode="for i in range(1, 6):\n    if i % 2 == 0:\n        print(i, end=' ')",
+        pertanyaan="Apa output dari program tersebut?"
     )
 
     menu:
-        "Keputusan Presiden Soekarno tahun 1960":
+        "1 3 5":
             hide screen timer_screen
             hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "Soekarno?! KPK lahir jauh setelah era Orde Lama!"
+            k "Itu angka GANJIL! Kondisi i % 2 == 0 memilih yang habis dibagi 2, yaitu GENAP!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "KPK adalah produk Reformasi—bukan era Soekarno. Pikirkan lagi!"
+            a "% 2 == 0 artinya sisa bagi = 0, yaitu angka genap. Bukan ganjil!"
             hide a_talk
             jump cadangan_ch4_7b
 
-        "Undang-Undang Nomor 30 Tahun 2002":
+        "2 4":
             hide screen timer_screen
             hide screen soal_panel
             $ fase3_benar += 1
@@ -1545,7 +1545,7 @@ label cadangan_ch4_7b:
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), getar with dissolve
-            k "UU No.30 Tahun 2002! KPK lahir dari tuntutan Reformasi untuk berantas korupsi!"
+            k "2 4! Dari range(1,6) yaitu 1-5, yang genap (% 2 == 0) hanya 2 dan 4!"
             hide k_angrytalk
             play sound "audio/sfx/chapter 4/monster.mp3"
             show dur_talk at Position(xalign=0.5, yalign=0.3), getar with dissolve
@@ -1556,31 +1556,31 @@ label cadangan_ch4_7b:
             hide a_talk
             jump boss_duryodana_menang
 
-        "Peraturan Pemerintah Soeharto tahun 1985":
+        "2 4 6":
             hide screen timer_screen
             hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "Era Soeharto?! KPK justru dibentuk KARENA warisan korupsi Orde Baru!"
+            k "6 tidak masuk! range(1, 6) berhenti di 5—angka 6 tidak ada!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "KPK lahir dari gerakan Reformasi pasca-1998 sebagai reaksi atas korupsi Orde Baru!"
+            a "range(1,6) = 1,2,3,4,5. Tidak ada 6 di sana! Coba soal serupa!"
             hide a_talk
             jump cadangan_ch4_7b
 
-        "Dekrit Presiden Habibie tahun 1998":
+        "1 2 3 4 5":
             hide screen timer_screen
             hide screen soal_panel
             show screen feedback_screen("salah")
             pause 1.6
             hide screen feedback_screen
             show k_angrytalk at Position(xalign=0.5, yalign=0.3), lompat_kaget with dissolve
-            k "Habibie memang era Reformasi, tapi KPK baru resmi terbentuk 4 tahun setelahnya!"
+            k "Semua angka?! Ada kondisi if i % 2 == 0 yang menyaring hanya angka genap!"
             hide k_angrytalk
             show a_talk at Position(xalign=0.5, yalign=0.3) with dissolve
-            a "KPK dibentuk oleh UU No.30 Tahun 2002—di era Presiden Megawati, bukan Habibie!"
+            a "Tidak semua angka dicetak—hanya yang lolos kondisi % 2 == 0 (genap)!"
             hide a_talk
             jump cadangan_ch4_7b
 
@@ -1621,6 +1621,8 @@ label boss_duryodana_menang:
     nr "Perlahan-lahan, beberapa rumah dan bangunan mulai menghapus dirinya sendiri"
     nr "layaknya program yang akan ditutup."
     nr "Melihat hal itu, pikiran Kreswara langsung tertuju pada AS-LEEN."
+    
+    scene bg_peluk with dissolve
 
     nr "Saat Kreswara baru saja berbalik, tiba-tiba AS-LEEN langsung memeluk tubuhnya,"
     nr "sementara tubuh gadis itu perlahan-lahan mulai terhapus juga."
@@ -1648,20 +1650,14 @@ label boss_duryodana_menang:
     k "Kisah kita akan terus abadi dan hidup, baik dalam bentuk apapun yang akan kubuat nanti"
     k "maupun dalam hati orang-orang yang mengetahui kisah kita."
     stop music fadeout 2.0
-
-    scene black with Dissolve(2.0)
-    pause 1.5
-
+    
     play music "audio/backsound/Chapter 4/vanguardiacreate-the-final-countdown-250335 (1).mp3" fadein 1.5
 
     nr "Di tengah keheningan virtual yang perlahan memudar,"
     nr "Kreswara merasakan satu tarikan terakhir dari dunia ini."
     nr "Sebuah pilihan yang tidak pernah ada dalam skenario mana pun."
     nr "Pilihan yang hanya bisa dijawab oleh dirinya sendiri."
-
-    scene bg_langit_jingga_virtual with Dissolve(2.0)
-    pause 1.0
-
+    
     nr "Langit jingga virtual itu terasa begitu nyata terlalu nyata."
     nr "Dan di ujung kesadaran itu, suara AS-LEEN terdengar untuk terakhir kalinya."
 
