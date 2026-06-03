@@ -42,14 +42,14 @@ screen credits_screen(ending_type="good"):
 
         ## ── Judul ────────────────────────────────────────────────────────
         null height 60
-        text "Digital Wayang":
+        text "Kreswara Studio":
             xalign 0.5
             size 54
             color "#c8a96e"
             bold True
             text_align 0.5
 
-        text "Kreswara and the Lost Souls":
+        text "Kreswara Echo Of the Lost Souls":
             xalign 0.5
             size 26
             color "#f5ead8cc"
