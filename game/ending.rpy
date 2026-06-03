@@ -143,17 +143,14 @@ label puzzle_kode_good_berhasil:
     centered "akhirnya menemukan jalannya pulang."
     pause 2.0
 
-    centered "Terima kasih sudah bermain."
-    centered "Digital Wayang: Kreswara and the Lost Souls"
-    pause 3.0
-
     $ persistent.chapter2_unlocked = True
     $ persistent.chapter3_unlocked = True
     $ persistent.chapter4_unlocked = True
 
     scene black with Dissolve(2.0)
     pause 1.0
-    $ renpy.full_restart()
+    $ store.credits_ending_type = "good"
+    jump credits
 
 
 label scene_rumah_sakit_bad:
@@ -253,6 +250,7 @@ label puzzle_kode_bad_berhasil:
     nr "Ia membuka pintu itu dengan satu tangan dan tangan lainnya memegang bunga dan buah kesukaan Wara."
 
     play sound "audio/sfx/ending/pintu_dibuka.mp3"
+    scene wara_meinggal with Dissolve
 
     nr "Namun yang ia lihat justru beberapa petugas kesehatan dan dokter yang sedang menutupi tubuh pasangannya itu dengan kain putih."
     nr "Dari jauh kakinya terlihat pucat dan sudah tidak bergerak."
@@ -284,14 +282,11 @@ label puzzle_kode_bad_berhasil:
     centered "namun waktu tidak pernah menunggu siapa pun."
     pause 2.0
 
-    centered "Terima kasih sudah bermain."
-    centered "Digital Wayang: Kreswara and the Lost Souls"
-    pause 3.0
-
     $ persistent.chapter2_unlocked = True
     $ persistent.chapter3_unlocked = True
     $ persistent.chapter4_unlocked = True
 
     scene black with Dissolve(2.0)
     pause 1.0
-    $ renpy.full_restart()
+    $ store.credits_ending_type = "bad"
+    jump credits
